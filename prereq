@@ -1,4 +1,4 @@
-pavucontrol NetworkManager-tui mako
+pavucontrol NetworkManager-tui mako swaybg
 
 sudo dnf copr enable varlad/onefetch
 sudo dnf install onefetch
