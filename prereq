@@ -1,4 +1,7 @@
 pavucontrol NetworkManager-tui mako
 
+sudo dnf copr enable varlad/onefetch
+sudo dnf install onefetch
+
 sudo cp ./bin/tmux_sessions /usr/bin/tmux_sessions
 sudo chmod +x /usr/bin/tmux_sessions
