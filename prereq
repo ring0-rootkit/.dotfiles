@@ -1,0 +1,3 @@
+pavucontrol
+sudo cp ./bin/tmux_sessions /usr/bin/tmux_sessions
+sudo chmod +x /usr/bin/tmux_sessions
