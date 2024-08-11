@@ -24,6 +24,8 @@ export VISUAL="nvim"
 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+export PATH="$PATH:/opt/nvim-linux64/bin"
+. "$HOME/.cargo/env"  
 
 alias templg="cd templ && templ generate && cd .."
 alias ta="tmux_sessions a"
