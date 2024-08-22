@@ -8,6 +8,8 @@
         "vscodevim.vim": 1,
     },
 
+    "editor.lineNumbers": "relative",
+
     "remote.SSH.remotePlatform": {
         "vm": "linux"
     },
