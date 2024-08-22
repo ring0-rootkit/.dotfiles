@@ -31,7 +31,7 @@ create_or_attach_session() {
 }
 
 fzf_session() {
-    TARGET_DIR=$(find ~/personal/ ~/work -mindepth 1 -maxdepth 1 | fzf --preview 'ls -hgltpnG {} --color=always')
+    TARGET_DIR=$(find ~/personal/ ~/work/ -mindepth 1 -maxdepth 1 | fzf --preview 'ls -hgltpnG {} --color=always')
     SESSION_NAME=${TARGET_DIR##*/}
     COMMAND="cd $TARGET_DIR"
 

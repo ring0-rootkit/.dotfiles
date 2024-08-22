@@ -35,7 +35,7 @@ alias dc=cd
 alias ls='ls'
 alias vim=nvim
 # alias f='cd $(find . -type d -print | fzf)'
-alias f='cd $(find ~/personal/ ~/work -mindepth 1 -maxdepth 1 | fzf --preview "ls -hgltpnG {} --color=always")'
+alias f='cd $(find ~/personal/ ~/work/ -mindepth 1 -maxdepth 1 | fzf --preview "ls -hgltpnG {} --color=always")'
 alias scripts="cd /mnt/storage/scripts"
 alias n='neofetch'
 alias gitignore="echo '.*' > .gitignore"
