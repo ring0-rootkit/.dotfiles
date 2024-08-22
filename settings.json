@@ -1,0 +1,17 @@
+{
+    "editor.fontSize": 18,
+
+    "vim.easymotion": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": false,
+    "extensions.experimental.affinity": {
+        "vscodevim.vim": 1,
+    },
+
+    "remote.SSH.remotePlatform": {
+        "vm": "linux"
+    },
+    "workbench.startupEditor": "none",
+    "workbench.colorTheme": "Tsoding Emacs Gruber Darkest",
+    "autoHide.enable": false
+}
