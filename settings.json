@@ -3,7 +3,12 @@
 
     "vim.easymotion": true,
     "vim.useSystemClipboard": true,
-    "vim.useCtrlKeys": false,
+    "vim.useCtrlKeys": true,
+    "vim.handleKeys": {
+        "<C-p>": false,
+        "<C-n>": false,
+        "<C-b>": false,
+    },
     "extensions.experimental.affinity": {
         "vscodevim.vim": 1,
     },
@@ -15,5 +20,7 @@
     },
     "workbench.startupEditor": "none",
     "workbench.colorTheme": "Tsoding Emacs Gruber Darkest",
-    "autoHide.enable": false
+    "autoHide.enable": false,
+    "git.autofetch": true,
+    "workbench.editor.showTabs": "single"
 }
