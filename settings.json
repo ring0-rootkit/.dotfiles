@@ -8,6 +8,7 @@
         "<C-p>": false,
         "<C-n>": false,
         "<C-b>": false,
+        "<C-k>": false,
     },
     "extensions.experimental.affinity": {
         "vscodevim.vim": 1,
