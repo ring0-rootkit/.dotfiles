@@ -12,13 +12,15 @@ set $term kitty
 # Your preferred application launcher
 set $menu wofi --show drun
 
+set $browser google-chrome
+
 ### Output configuration
 
 # output * bg @datadir@/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 
 # Example configuration:
 #
-#   output HDMI-A-1 resolution 1920x1080 position 1920,0
+output eDP-1 res 2880x1800@120Hz scale 1 position 0,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
