@@ -1,6 +1,10 @@
+required:
 xdg-desktop-portal-wlr
 wofi
-kitty
 brightnessctl
 grimshot
 swaylock
+
+defaults:
+google-chrome
+kitty
