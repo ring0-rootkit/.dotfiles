@@ -1,5 +1,4 @@
 xdg-desktop-portal-wlr
 wofi
 kitty
-wl-clipboard
 brightnessctl

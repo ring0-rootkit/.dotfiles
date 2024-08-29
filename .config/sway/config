@@ -1,6 +1,7 @@
 ### startup
 
-exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+exec --no-startup-id dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+exec --no-startup-id nm-applet
 
 ### Variables
 #
@@ -66,6 +67,7 @@ input type:pointer {
 #
     # Start a terminal
     bindsym $mod+Return exec $term
+    bindsym $mod+Shift+Return exec $browser
 
     # Kill focused window
     bindsym $mod+q kill
@@ -239,6 +241,11 @@ bar {
         inactive_workspace #32323200 #32323200 #5c5c5c
         focused_workspace #ffdd33 #ffdd33 #000000
     }
+}
+
+input type:keyboard {
+    xkb_layout us,ru
+    xkb_options grp:win_space_toggle
 }
 
 include @sysconfdir@/sway/config.d/*
