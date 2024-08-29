@@ -250,6 +250,9 @@ input type:keyboard {
 bindsym $mod+Shift+z exec grimshot copy area
 bindsym $mod+Shift+x exec mkdir ~/Pictures/screenshots/ -p && grimshot save area ~/Pictures/screenshots/$(date +%s).jpg
 
+bindsym ctrl+Escape exec swaylock -c 181818
+bindsym ctrl+shift+Escape exec eval '$(swaylock -c 181818) &' && systemctl suspend
+
 ### startup
 
 exec --no-startup-id dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
