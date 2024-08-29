@@ -1,8 +1,3 @@
-### startup
-
-exec --no-startup-id dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
-exec --no-startup-id nm-applet
-
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -223,7 +218,7 @@ bindsym $mod+r mode "resize"
 default_border pixel 2
 hide_edge_borders --i3 smart
 
-client.focused 101010 101010 e4e4e4
+client.focused f6c177 f6c177 e4e4e4
 client.focused_inactive 181818 181818 e4e4e4
 client.unfocused 181818 181818 e4e4e4
 client.urgent ff4f58 ff4f58 e4e4e4 
@@ -247,5 +242,16 @@ input type:keyboard {
     xkb_layout us,ru
     xkb_options grp:win_space_toggle
 }
+
+### CUSTOM THINGS
+
+
+bindsym $mod+Shift+z exec grimshot copy area
+bindsym $mod+Shift+x exec mkdir ~/Pictures/screenshots/ -p && grimshot save area ~/Pictures/screenshots/$(date +%s).jpg
+
+### startup
+
+exec --no-startup-id dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+exec --no-startup-id nm-applet
 
 include @sysconfdir@/sway/config.d/*
