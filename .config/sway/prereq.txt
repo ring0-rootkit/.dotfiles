@@ -3,3 +3,4 @@ wofi
 kitty
 brightnessctl
 grimshot
+swaylock
