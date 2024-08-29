@@ -2,3 +2,4 @@ xdg-desktop-portal-wlr
 wofi
 kitty
 brightnessctl
+grimshot

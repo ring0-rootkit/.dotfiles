@@ -217,8 +217,9 @@ bindsym $mod+r mode "resize"
 
 default_border pixel 2
 hide_edge_borders --i3 smart
+titlebar_padding 1
 
-client.focused f6c177 f6c177 e4e4e4
+client.focused ffdd33 ffdd33 000000
 client.focused_inactive 181818 181818 e4e4e4
 client.unfocused 181818 181818 e4e4e4
 client.urgent ff4f58 ff4f58 e4e4e4 
