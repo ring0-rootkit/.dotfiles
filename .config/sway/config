@@ -256,6 +256,6 @@ bindsym ctrl+shift+Escape exec eval '$(swaylock -c 181818) &' && systemctl suspe
 ### startup
 
 exec --no-startup-id dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
-exec --no-startup-id nm-applet
+# exec --no-startup-id nm-applet
 
 include @sysconfdir@/sway/config.d/*
