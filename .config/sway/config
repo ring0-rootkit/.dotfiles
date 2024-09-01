@@ -215,7 +215,7 @@ bindsym $mod+r mode "resize"
 #
 # Read `man 5 sway-bar` for more information about this section.
 
-default_border pixel 4
+default_border pixel 2
 hide_edge_borders --i3 smart
 titlebar_padding 1
 
