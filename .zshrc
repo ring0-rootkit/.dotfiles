@@ -24,8 +24,11 @@ export VISUAL="nvim"
 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+export PATH=$PATH:/usr/local/go/bin
 export PATH="$PATH:/opt/nvim-linux64/bin"
 . "$HOME/.cargo/env"  
+
+alias emacs="emacsclient -t"
 
 alias templg="cd templ && templ generate && cd .."
 alias ta="tmux_sessions a"
@@ -53,7 +56,7 @@ alias ls='ls --color'
 alias la='ls -A --color'
 alias ll='ls -Al --color'
 
-if [ -z $TMUX ]; then; tmux_sessions a q1; fi
+# if [ -z $TMUX ]; then; tmux_sessions a q1; fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
