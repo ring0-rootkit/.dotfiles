@@ -16,7 +16,7 @@ set $browser firefox
 
 ### Output configuration
 
-# output * bg @datadir@/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg ~/.config/sway/wall.png fill
 
 # Example configuration:
 #
@@ -232,8 +232,8 @@ bar {
     status_command while date +'%Y-%m-%d %X'; do sleep 1; done
 
     colors {
-        statusline #ffffff
-        background #181818
+        statusline #000000
+        background #feecee
         inactive_workspace #32323200 #32323200 #5c5c5c
         focused_workspace #ffdd33 #ffdd33 #000000
     }
