@@ -12,7 +12,7 @@ set $term kitty
 # Your preferred application launcher
 set $menu wofi --show drun
 
-set $browser flatpak run org.chromium.Chromium
+set $browser google-chrome
 
 ### Output configuration
 
