@@ -12,12 +12,12 @@ set $term kitty
 # Your preferred application launcher
 set $menu wofi --show drun
 
-set $browser firefox
+set $browser flatpak run org.chromium.Chromium
 
 ### Output configuration
 
-# output * bg ~/.config/sway/wall.png fill
-output * bg #282828 solid_color
+output * bg ~/.config/sway/wall.png fill
+# output * bg #282828 solid_color
 
 # Example configuration:
 #
