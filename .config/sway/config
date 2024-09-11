@@ -16,8 +16,8 @@ set $browser google-chrome
 
 ### Output configuration
 
-output * bg ~/.config/sway/wall.png fill
-# output * bg #282828 solid_color
+# output * bg ~/.config/sway/wall.png fill
+output * bg #282828 solid_color
 
 # Example configuration:
 #
