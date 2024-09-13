@@ -46,8 +46,8 @@ alias gs="git status"
 alias c=gcc -std=c99
 alias darktheme='gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark \
 && gsettings set org.gnome.desktop.interface color-scheme prefer-dark'
-alias lighttheme='gsettings set org.gnome.desktop.interface gtk-theme Adwaita \
-&& gsettings set org.gnome.desktop.interface color-scheme prefer-light'
+# alias lighttheme='gsettings set org.gnome.desktop.interface gtk-theme Adwaita \
+# && gsettings set org.gnome.desktop.interface color-scheme prefer-light'
 alias ts="ts-node"
 alias t5="sowon 300"
 alias t15="sowon 900"
