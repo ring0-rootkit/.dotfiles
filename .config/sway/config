@@ -247,6 +247,8 @@ input type:keyboard {
 
 ### CUSTOM THINGS
 
+bindsym $mod+m output "eDP-1" toggle
+
 bindsym --whole-window ctrl+button8 exec woomer
 bindsym $mod+Shift+z exec grimshot copy area
 bindsym $mod+Shift+x exec mkdir ~/Pictures/screenshots/ -p && grimshot save area ~/Pictures/screenshots/$(date +%s).jpg
