@@ -235,16 +235,16 @@ bar {
 
     colors {
         # dark
-        statusline #ffffff
-        background #181818
-        inactive_workspace #323232 #323232 #ffffff
-        focused_workspace #ffdd33 #ffdd33 #000000
+        # statusline #ffffff
+        # background #181818
+        # inactive_workspace #323232 #323232 #ffffff
+        # focused_workspace #ffdd33 #ffdd33 #000000
 
         # light
-        # statusline #000000
-        # background #ffffff
-        # inactive_workspace #ffffff #ffffff #000000
-        # focused_workspace #ffdd33 #ffdd33 #000000
+        statusline #000000
+        background #ffffff
+        inactive_workspace #ffffff #ffffff #000000
+        focused_workspace #ffdd33 #ffdd33 #000000
     }
 }
 
@@ -256,6 +256,9 @@ input type:keyboard {
 ### CUSTOM THINGS
 
 bindsym $mod+m output "eDP-1" toggle
+
+bindsym $mod+bracketleft exec 'gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark && gsettings set org.gnome.desktop.interface color-scheme prefer-dark'
+bindsym $mod+bracketright exec 'gsettings set org.gnome.desktop.interface gtk-theme Adwaita && gsettings set org.gnome.desktop.interface color-scheme prefer-light'
 
 bindsym --whole-window ctrl+button8 exec woomer
 bindsym $mod+Shift+z exec grimshot copy area
