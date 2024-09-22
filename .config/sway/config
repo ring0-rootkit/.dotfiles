@@ -235,16 +235,16 @@ bar {
 
     colors {
         # dark
-        # statusline #ffffff
-        # background #181818
-        # inactive_workspace #323232 #323232 #ffffff
-        # focused_workspace #ffdd33 #ffdd33 #000000
+        statusline #ffffff
+        background #181818
+        inactive_workspace #323232 #323232 #ffffff
+        focused_workspace #ffdd33 #ffdd33 #000000
 
         # light
-        statusline #000000
-        background #ffffff
-        inactive_workspace #ffffff #ffffff #000000
-        focused_workspace #ffdd33 #ffdd33 #000000
+        # statusline #000000
+        # background #ffffff
+        # inactive_workspace #ffffff #ffffff #000000
+        # focused_workspace #ffdd33 #ffdd33 #000000
     }
 }
 
