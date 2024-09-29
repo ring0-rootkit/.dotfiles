@@ -250,6 +250,12 @@ bindsym $mod+Shift+x exec mkdir ~/Pictures/screenshots/ -p && grimshot save area
 bindsym ctrl+Escape exec swaylock -c 181818
 bindsym ctrl+shift+Escape exec eval '$(swaylock -c 181818) &' && systemctl suspend
 
+for_window [app_id="pavucontrol"]       move scratchpad, scratchpad show
+for_window [app_id="nmtui"] move scratchpad, scratchpad show
+bindsym ctrl+1 exec swaymsg [app_id="pavucontrol"] scratchpad show || exec pavucontrol , resize set 600 200
+bindsym ctrl+2 exec swaymsg [app_id="nmtui"] scratchpad show || exec $term --class nmtui -e 'nmtui'
+
+
 ### startup
 
 exec --no-startup-id dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
