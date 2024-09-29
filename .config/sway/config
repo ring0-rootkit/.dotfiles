@@ -220,6 +220,9 @@ default_border pixel 2
 hide_edge_borders --i3 smart
 titlebar_padding 1
 
+gaps outer 5
+gaps inner 5
+
 client.focused ffdd33 ffdd33 000000
 client.focused_inactive 181818 181818 e4e4e4
 client.unfocused 181818 181818 e4e4e4
