@@ -17,7 +17,8 @@ set $browser google-chrome
 ### Output configuration
 
 # output * bg ~/.config/sway/wall.png fill
-output * bg #282828 solid_color
+output * bg ~/.config/sway/wall.jpg fill
+# output * bg #282828 solid_color
 
 # Example configuration:
 #
@@ -25,32 +26,13 @@ output eDP-1 res 2880x1800@120Hz scale 2 position 0,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
-### Idle configuration
-#
-# Example configuration:
-#
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-#          before-sleep 'swaylock -f -c 000000'
-#
-# This will lock your screen after 300 seconds of inactivity, then turn off
-# your displays after another 300 seconds, and turn your screens back on when
-# resumed. It will also lock your screen before your computer goes to sleep.
-
 ### Input configuration
-#
-# Example configuration:
-#
-#   input "2:14:SynPS/2_Synaptics_TouchPad" {
-#       dwt enabled
-#       tap enabled
-#       natural_scroll enabled
-#       middle_emulation enabled
-#   }
-#
-# You can get the names of your inputs by running: swaymsg -t get_inputs
-# Read `man 5 sway-input` for more information about this section.
+input type:touchpad {
+    dwt enabled
+    tap enabled
+    natural_scroll enabled
+    middle_emulation enabled
+}
 
 input type:pointer {
     accel_profile flat
@@ -58,9 +40,6 @@ input type:pointer {
 }
 
 ### Key bindings
-#
-# Basics:
-#
     # Start a terminal
     bindsym $mod+Return exec $term
     bindsym $mod+Shift+Return exec $browser
@@ -229,7 +208,8 @@ client.unfocused 181818 181818 e4e4e4
 client.urgent ff4f58 ff4f58 e4e4e4 
 
 bar {
-    position bottom
+    position top
+    # position bottom
 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
