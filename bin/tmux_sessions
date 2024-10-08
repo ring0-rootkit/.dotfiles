@@ -33,6 +33,7 @@ create_or_attach_session() {
 fzf_session() {
     TARGET_DIR=$(find ~/personal/ ~/work/ -mindepth 1 -maxdepth 1 | fzf --preview 'ls -hgltpnG {} --color=always')
     SESSION_NAME=${TARGET_DIR##*/}
+    SESSION_NAME=$(echo $SESSION_NAME | sed 's/\./_/g')
     COMMAND="cd $TARGET_DIR"
 
     if [ -z "$SESSION_NAME" ]; then
