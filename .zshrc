@@ -6,6 +6,8 @@ zstyle :compinstall filename '/home/ring0/.zshrc'
 
 autoload -Uz vcs_info
 precmd() { vcs_info }
+git_wt() { echo; cd $(git_worktree | tail -n 1); zle accept-line; }
+zle -N git_wt
 
 zstyle ':vcs_info:git:*' formats '%b '
 
@@ -16,7 +18,7 @@ compinit
 bindkey '^[[1;5C' forward-word                    # ctrl + ->
 bindkey '^[[1;5D' backward-word                   # ctrl + <-
 
-bindkey -s '^k' 'cd $(git_worktree | tail -n 1)^M'
+bindkey '^k' git_wt
 alias wt="git worktree"
 
 setopt PROMPT_SUBST
