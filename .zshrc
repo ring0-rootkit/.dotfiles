@@ -16,6 +16,9 @@ compinit
 bindkey '^[[1;5C' forward-word                    # ctrl + ->
 bindkey '^[[1;5D' backward-word                   # ctrl + <-
 
+bindkey -s '^k' 'cd $(git_worktree | tail -n 1)^M'
+alias wt="git worktree"
+
 setopt PROMPT_SUBST
 PROMPT='%F{blue}%1~%f %F{red}${vcs_info_msg_0_}%f%F{green}→%f '
 
