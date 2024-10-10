@@ -1,0 +1,25 @@
+#!/bin/bash
+
+URL=$1
+
+if [[ -z $URL ]]; then
+  exit 0
+fi
+
+BASENAME=$(basename $URL)
+DIRNAME=${BASENAME%.*}
+
+mkdir $DIRNAME
+cd $DIRNAME
+
+git clone $URL tmp
+
+cd tmp
+BRANCH=$(git branch --show-current)
+
+cd ..
+mv tmp $BRANCH
+
+cd $BRANCH
+
+echo $(pwd)

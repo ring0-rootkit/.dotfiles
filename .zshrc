@@ -6,7 +6,9 @@ zstyle :compinstall filename '/home/ring0/.zshrc'
 
 autoload -Uz vcs_info
 precmd() { vcs_info }
+
 git_wt() { echo; cd $(git_worktree | tail -n 1); zle accept-line; }
+create_wt() { echo; cd $(wt_create $1); }
 zle -N git_wt
 
 zstyle ':vcs_info:git:*' formats '%b '
@@ -20,6 +22,7 @@ bindkey '^[[1;5D' backward-word                   # ctrl + <-
 
 bindkey '^k' git_wt
 alias wt="git worktree"
+alias wc=create_wt
 
 setopt PROMPT_SUBST
 PROMPT='%F{blue}%1~%f %F{red}${vcs_info_msg_0_}%f%F{green}→%f '
