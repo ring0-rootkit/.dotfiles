@@ -22,7 +22,7 @@ bindkey '^[[1;5D' backward-word                   # ctrl + <-
 
 bindkey '^k' git_wt
 alias wt="git worktree"
-alias wc=create_wt
+alias wtc=create_wt
 
 setopt PROMPT_SUBST
 PROMPT='%F{blue}%1~%f %F{red}${vcs_info_msg_0_}%f%F{green}→%f '
