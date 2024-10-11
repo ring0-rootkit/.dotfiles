@@ -7,9 +7,11 @@ zstyle :compinstall filename '/home/ring0/.zshrc'
 autoload -Uz vcs_info
 precmd() { vcs_info }
 
-git_wt() { echo; cd $(git_worktree | tail -n 1); zle accept-line; }
+git_wt() { echo; cd $(git_worktree f | tail -n 1); zle accept-line; }
+git_wt_new_branch() { echo; cd $(git_worktree b $1 | tail -n 1); }
 create_wt() { echo; cd $(wt_create $1); }
 zle -N git_wt
+zle -N git_wt_new_branch
 
 zstyle ':vcs_info:git:*' formats '%b '
 
@@ -20,9 +22,15 @@ compinit
 bindkey '^[[1;5C' forward-word                    # ctrl + ->
 bindkey '^[[1;5D' backward-word                   # ctrl + <-
 
+# GIT START
 bindkey '^k' git_wt
 alias wt="git worktree"
 alias wtc=create_wt
+alias wtb=git_wt_new_branch
+
+alias gitignore="echo '.*' > .gitignore"
+alias gs="git status"
+# GIT END
 
 setopt PROMPT_SUBST
 PROMPT='%F{blue}%1~%f %F{red}${vcs_info_msg_0_}%f%F{green}→%f '
@@ -49,8 +57,6 @@ alias vim=nvim
 alias f='cd $(find ~/personal/ ~/work/ -mindepth 1 -maxdepth 1 | fzf --preview "ls -hgltpnG {} --color=always")'
 alias scripts="cd /mnt/storage/scripts"
 alias n='neofetch'
-alias gitignore="echo '.*' > .gitignore"
-alias gs="git status"
 alias c=gcc -std=c99
 alias darktheme='gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark \
 && gsettings set org.gnome.desktop.interface color-scheme prefer-dark'

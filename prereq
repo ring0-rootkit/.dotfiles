@@ -1,7 +1,6 @@
-pavucontrol NetworkManager-tui mako swaybg
+kitty pavucontrol nmtui wofi xdg-desktop-portal-wlr xdg-desktop-portal-gtk
 
 sudo dnf copr enable varlad/onefetch
 sudo dnf install onefetch
 
-sudo cp ./bin/tmux_sessions /usr/bin/tmux_sessions
-sudo chmod +x /usr/bin/tmux_sessions
+sudo cp ./bin/* /usr/bin/
