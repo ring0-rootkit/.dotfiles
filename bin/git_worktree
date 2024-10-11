@@ -33,8 +33,7 @@ create_branch() {
   fi
 
   TARGET_BRANCH_DIR=$(echo $1 | sed 's/\//-/g')
-  git branch $1
-  git worktree add ../$TARGET_BRANCH_DIR $1
+  git worktree add -b $1 ../$TARGET_BRANCH_DIR
   echo "$PWD/../$TARGET_BRANCH_DIR"
 }
 

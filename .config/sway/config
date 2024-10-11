@@ -243,7 +243,7 @@ bindsym $mod+m output "eDP-1" toggle
 bindsym $mod+bracketleft exec 'gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark && gsettings set org.gnome.desktop.interface color-scheme prefer-dark'
 bindsym $mod+bracketright exec 'gsettings set org.gnome.desktop.interface gtk-theme Adwaita && gsettings set org.gnome.desktop.interface color-scheme prefer-light'
 
-bindsym --whole-window ctrl+button8 exec woomer
+bindsym $mod+grave exec ~/.config/sway/bin/woomer
 bindsym $mod+Shift+z exec grimshot copy area
 bindsym $mod+Shift+x exec mkdir ~/Pictures/screenshots/ -p && grimshot save area ~/Pictures/screenshots/$(date +%s).jpg
 
