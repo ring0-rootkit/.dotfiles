@@ -67,8 +67,7 @@ alias t5="sowon 300"
 alias t15="sowon 900"
 
 alias ls='ls --color'
-alias la='ls -A --color'
-alias ll='ls -Al --color'
+alias l='ls -hgtpnG --color'
 
 # if [ -z $TMUX ]; then; tmux_sessions a q1; fi
 

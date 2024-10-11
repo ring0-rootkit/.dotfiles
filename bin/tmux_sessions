@@ -31,7 +31,7 @@ create_or_attach_session() {
 }
 
 fzf_session() {
-    TARGET_DIR=$(find ~/personal/ ~/work/ -mindepth 1 -maxdepth 1 | fzf --preview 'ls -hgltpnG {} --color=always')
+    TARGET_DIR=$(find ~/personal/ ~/work/ -mindepth 1 -maxdepth 1 | fzf --preview 'ls -hgtpnG {} --color=always')
     SESSION_NAME=${TARGET_DIR##*/}
     SESSION_NAME=$(echo $SESSION_NAME | sed 's/\./_/g')
     COMMAND="cd $TARGET_DIR"
@@ -46,6 +46,8 @@ fzf_session() {
     else
         tmux new-session -d -s "$SESSION_NAME"
         tmux send-keys -t "$SESSION_NAME" "$COMMAND" Enter
+        tmux send-keys -t "$SESSION_NAME" "clear" Enter
+        tmux send-keys -t "$SESSION_NAME" "l" Enter
         tmux switch-client -t "$SESSION_NAME"
     fi
 }
