@@ -23,7 +23,7 @@ set incsearch
 " Don't use Ex mode, use Q for formatting.
 map <leader>r <Action>(RenameElement)
 map <leader>z <Action>(ToggleDistractionFreeMode)
-map <S-Space> <Action>(GotoNextError)
+map <leader>e <Action>(ShowErrorDescription)
 
 nmap <C-A-j> :action EditorCloneCaretBelow<CR>
 nmap <C-A-k> :action EditorCloneCaretAbove<CR>
