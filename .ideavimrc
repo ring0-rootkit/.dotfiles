@@ -1,8 +1,4 @@
 let mapleader = " "
-" .ideavimrc is a configuration file for IdeaVim plugin. It uses
-"   the same commands as the original .vimrc configuration.
-" You can find a list of commands here: https://jb.gg/h38q75
-" Find more examples here: https://jb.gg/share-ideavimrc
 
 set clipboard+=unnamedplus
 set relativenumber
@@ -12,9 +8,13 @@ set so=5
 set incsearch
 set nu
 
-"" -- Suggested options --
-" Show a few lines of context around the cursor. Note that this makes the
-" text scroll if you mouse-click near the start or end of the window.
+
+" Highlight copied text
+Plug 'machakann/vim-highlightedyank'
+" Commentary plugin
+Plug 'tpope/vim-commentary'
+Plug 'preservim/nerdtree'
+
 set scrolloff=5
 
 " Do incremental searching.
@@ -35,7 +35,3 @@ map <leader>o <Action>(FileStructurePopup)
 
 " --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
 
-" Highlight copied text
-Plug 'machakann/vim-highlightedyank'
-" Commentary plugin
-Plug 'tpope/vim-commentary'
