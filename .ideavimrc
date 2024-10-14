@@ -25,11 +25,12 @@ map <leader>r <Action>(RenameElement)
 map <leader>z <Action>(ToggleDistractionFreeMode)
 map <leader>e <Action>(ShowErrorDescription)
 
+map <leader>t <Action>(ActivateTerminalToolWindow)
+
 nmap <C-A-j> :action EditorCloneCaretBelow<CR>
 nmap <C-A-k> :action EditorCloneCaretAbove<CR>
 
-" Reformat the current line only
-map <leader>l V<Action>(ReformatCode)
+map <leader>f <Action>(ReformatCode)
 
 map <leader>o <Action>(FileStructurePopup)
 
