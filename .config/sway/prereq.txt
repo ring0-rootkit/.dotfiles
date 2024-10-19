@@ -4,6 +4,8 @@ wofi
 brightnessctl
 grimshot
 swaylock
+pulseaudio-utils
+mako (mako-notifier for ubuntu)
 
 defaults:
 google-chrome
