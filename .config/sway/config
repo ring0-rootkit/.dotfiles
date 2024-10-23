@@ -254,7 +254,7 @@ bindsym ctrl+shift+Escape exec eval '$(swaylock -c 181818) &' && systemctl suspe
 
 for_window [app_id="pavucontrol"]       move scratchpad, scratchpad show
 for_window [app_id="nmtui"] move scratchpad, scratchpad show
-bindsym ctrl+1 exec swaymsg [app_id="pavucontrol"] scratchpad show || exec pavucontrol , resize set 700 200
+bindsym ctrl+1 exec swaymsg [app_id="pavucontrol"] scratchpad show || exec pavucontrol
 bindsym ctrl+2 exec swaymsg [app_id="nmtui"] scratchpad show || exec $term --class nmtui -e 'nmtui'
 
 ### startup
