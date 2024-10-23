@@ -1,0 +1,9 @@
+while true; do 
+
+layout=$(swaymsg -t get_inputs | jq -c ' .[] | select(.type | contains("keyboard"))' | jq -s -c '.[0].xkb_active_layout_name' | cut -c 2-3 | tr '[A-Z]' '[a-z]')
+date=$(date +'%Y-%m-%d %X')
+power=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep percentage| sed 's/.* //')
+
+echo $date 🔋$power $layout 
+sleep 1; 
+done

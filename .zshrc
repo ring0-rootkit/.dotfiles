@@ -44,24 +44,21 @@ export PATH=$PATH:/usr/local/go/bin
 export PATH="$PATH:/opt/nvim-linux64/bin"
 . "$HOME/.cargo/env"  
 
-alias emacs="emacsclient -t"
-
 alias templg="cd templ && templ generate && cd .."
 alias ta="tmux_sessions a"
 alias tl="tmux_sessions l"
 alias tk="tmux_sessions k"
 alias dc=cd
 alias ls='ls'
-alias vim=nvim
-# alias f='cd $(find . -type d -print | fzf)'
 alias f='cd $(find ~/personal/ ~/work/ -mindepth 1 -maxdepth 1 | fzf --preview "ls -hgltpnG {} --color=always")'
 alias scripts="cd /mnt/storage/scripts"
 alias n='neofetch'
 alias c=gcc -std=c99
-alias darktheme='gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark \
-&& gsettings set org.gnome.desktop.interface color-scheme prefer-dark'
-alias lighttheme='gsettings set org.gnome.desktop.interface gtk-theme Adwaita \
-&& gsettings set org.gnome.desktop.interface color-scheme prefer-light'
+alias vim=nvim
+# alias darktheme='gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark \
+# && gsettings set org.gnome.desktop.interface color-scheme prefer-dark'
+# alias lighttheme='gsettings set org.gnome.desktop.interface gtk-theme Adwaita \
+# && gsettings set org.gnome.desktop.interface color-scheme prefer-light'
 alias ts="ts-node"
 alias t5="sowon 300"
 alias t15="sowon 900"
