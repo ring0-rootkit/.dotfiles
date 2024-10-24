@@ -4,6 +4,14 @@ layout=$(swaymsg -t get_inputs | jq -c ' .[] | select(.type | contains("keyboard
 date=$(date +'%Y-%m-%d %X')
 power=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep percentage| sed 's/.* //')
 
-echo $date 🔋$power $layout 
+network_name=$(nmcli --fields name,type connection show --active | grep wifi | sed 's/  *wifi  *//')
+ip=$(hostname -I | awk '{print $1}')
+
+net=$(echo $network_name:$ip)
+if [ -z "$network_name" ];then
+  net=$(echo no network :\()
+fi
+
+echo $net \| $power \| $layout \| $date \|
 sleep 1; 
 done
