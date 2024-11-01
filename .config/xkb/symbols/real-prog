@@ -1,0 +1,32 @@
+xkb_symbols "real-prog" {
+
+    name[Group1]= "English (Real Programmers)";
+
+   include "us"
+
+    ## $/# ; ( { [ + = ] } ) : */& -/_
+    ## q w e r t y u i o p %/@ ^/!
+    ## a s d f g h j k l '/" `/~
+
+
+    key <TLDE> { [dollar       ,numbersign                                ]};
+
+    key <AE01> { [semicolon    ,1                                         ]};
+    key <AE02> { [parenleft    ,2                                         ]};
+    key <AE03> { [braceleft    ,3                                         ]};
+    key <AE04> { [bracketleft  ,4                                         ]};
+    key <AE05> { [plus         ,5                                         ]};
+    key <AE06> { [equal        ,6                                         ]};
+    key <AE07> { [bracketright ,7                                         ]};
+    key <AE08> { [braceright   ,8                                         ]};
+    key <AE09> { [parenright   ,9                                         ]};
+    key <AE10> { [colon        ,0                                         ]};
+    key <AE11> { [asterisk     ,ampersand                                 ]};
+    key <AE12> { [minus        ,underscore                                ]};
+
+    key <AC10> { [apostrophe   ,quotedbl                                  ]};
+    key <AC11> { [grave, asciitilde]};
+
+    key <AD11> { [percent      ,at                                        ]};
+    key <AD12> { [asciicircum,exclam                                      ]};
+};
