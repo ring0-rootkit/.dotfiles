@@ -4,10 +4,9 @@ xkb_symbols "real-prog" {
 
    include "us"
 
-    ## $/# ; ( { [ + = ] } ) : */& -/_
+    ## $/# ; ( { [ + - = ] } ) :/& */_
     ## q w e r t y u i o p %/@ ^/!
     ## a s d f g h j k l '/" `/~
-
 
     key <TLDE> { [dollar       ,numbersign                                ]};
 
@@ -16,13 +15,13 @@ xkb_symbols "real-prog" {
     key <AE03> { [braceleft    ,3                                         ]};
     key <AE04> { [bracketleft  ,4                                         ]};
     key <AE05> { [plus         ,5                                         ]};
-    key <AE06> { [equal        ,6                                         ]};
-    key <AE07> { [bracketright ,7                                         ]};
-    key <AE08> { [braceright   ,8                                         ]};
-    key <AE09> { [parenright   ,9                                         ]};
-    key <AE10> { [colon        ,0                                         ]};
-    key <AE11> { [asterisk     ,ampersand                                 ]};
-    key <AE12> { [minus        ,underscore                                ]};
+    key <AE06> { [minus        ,6                                         ]};
+    key <AE07> { [equal        ,7                                         ]};
+    key <AE08> { [bracketright ,8                                         ]};
+    key <AE09> { [braceright   ,9                                         ]};
+    key <AE10> { [parenright   ,0                                         ]};
+    key <AE11> { [colon     ,ampersand                                 ]};
+    key <AE12> { [asterisk        ,underscore                                ]};
 
     key <AC10> { [apostrophe   ,quotedbl                                  ]};
     key <AC11> { [grave, asciitilde]};
