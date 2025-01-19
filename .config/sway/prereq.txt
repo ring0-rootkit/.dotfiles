@@ -10,3 +10,6 @@ mako (mako-notifier for ubuntu)
 defaults:
 google-chrome
 kitty
+
+
+sudo update-alternatives --config x-cursor-theme

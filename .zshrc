@@ -66,7 +66,7 @@ alias t15="sowon 900"
 alias ls='ls --color'
 alias l='ls -hgtpnG --color'
 
-# if [ -z $TMUX ]; then; tmux_sessions a q1; fi
+if [ -z $TMUX ]; then; tmux_sessions a q1; fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -81,3 +81,10 @@ export PATH="/home/ring0/.local/share/solana/install/active_release/bin:$PATH"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+export PATH="/home/ring0/.avm/bin:$PATH"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+export CC=clang
