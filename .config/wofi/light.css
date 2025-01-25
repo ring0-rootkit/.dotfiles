@@ -2,7 +2,7 @@ window {
     margin: 0px;
     background-color: #ffffff;
     border-radius: 0px;
-    border: 2px solid #b4637a;
+    border: 2px solid #ffdd33;
     color: #575279;
     font-family: 'Monofur Nerd Font';
     font-size: 20px;
@@ -12,8 +12,8 @@ window {
     margin: 5px;
     border-radius: 0px;
     border: none;
-    border-radius: 0px;;
-    color: #b4637a;
+    border-radius: 0px;
+    color: #000000;
     background-color: #ffffff;
     
 }
@@ -44,15 +44,15 @@ window {
 } 
 
 #entry:selected {
-    background-color: #b4637a;
+    background-color: #ffdd33;
     color: #ffffff;
     border-radius: 0px;;
     outline: none;
 }
 
 #entry:selected * {
-    background-color: #b4637a;
-    color: #ffffff;
+    background-color: #ffdd33;
+    color: #000000;
     border-radius: 0px;;
     outline: none;
 }
