@@ -1,6 +1,6 @@
 window {
     margin: 0px;
-    background-color: #0e0e0e;
+    background-color: #181818;
     border-radius: 0px;
     border: 2px solid #ffdd33;
     color: #ffdd33;
@@ -14,14 +14,14 @@ window {
     border: none;
     border-radius: 0px;;
     color: #e3e3e3;
-    background-color: #181818;
+    background-color: #282828;
     
 }
 
 #inner-box {
     margin: 5px;
     border: none;
-    background-color: #0e0e0e;
+    background-color: #181818;
     color: #e3e3e3;
     border-radius: 0px;
 }
@@ -29,7 +29,7 @@ window {
 #outer-box {
     margin: 15px;
     border: none;
-    background-color: #0e0e0e;
+    background-color: #181818;
 }
 
 #scroll {
@@ -44,14 +44,14 @@ window {
 } 
 
 #entry:selected {
-    background-color: #181818;
+    background-color: #282828;
     color: #e3e3e3;
     border-radius: 0px;;
     outline: none;
 }
 
 #entry:selected * {
-    background-color: #181818;
+    background-color: #282828;
     color: #e3e3e3;
     border-radius: 0px;;
     outline: none;
