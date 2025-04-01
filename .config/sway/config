@@ -16,9 +16,9 @@ set $browser google-chrome
 
 ### Output configuration
 
-output * bg ~/.config/sway/wall.png fill
+# output * bg ~/.config/sway/wall.png fill
 
-# output * bg #282828 solid_color
+output * bg #282828 solid_color
 
 # Example configuration:
 #
@@ -246,12 +246,6 @@ bar {
         background #0e0e0e
         inactive_workspace #282828 #282828 #ffffff
         focused_workspace #ffdd33 #ffdd33 #000000
-
-        # light
-        # statusline #000000
-        # background #ffffff
-        # inactive_workspace #ffffff #ffffff #000000
-        # focused_workspace #ffdd33 #ffdd33 #000000
     }
 }
 
