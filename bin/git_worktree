@@ -8,7 +8,7 @@ fzf_tree() {
 
   TARGET_BRANCH=$(git branch -r --format "%(refname:lstrip=3)" | \
     grep -v -w HEAD | \
-    fzf --preview 'git log --oneline $(git branch -r | grep -v -w HEAD | grep -w {}$ | head -n 1)')
+    fzf --preview-window up,7,border-horizontal --preview 'git log --pretty=format:"%h %an %ad %s" --date=short $(git branch -r | grep -v -w HEAD | grep -w {}$ | head -n 1)')
 
   TARGET_BRANCH_DIR=$(echo $TARGET_BRANCH | sed 's/\//-/g')
 
