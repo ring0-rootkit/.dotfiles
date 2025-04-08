@@ -267,11 +267,11 @@ bindsym ctrl+shift+Escape exec eval '$(swaylock -c 181818) &' && systemctl suspe
 
 for_window [app_id="pavucontrol"]       move scratchpad, scratchpad show
 for_window [app_id="nmtui"] move scratchpad, scratchpad show
-bindsym ctrl+1 exec swaymsg [app_id="pavucontrol"] scratchpad show || exec pavucontrol
-bindsym ctrl+2 exec swaymsg [app_id="nmtui"] scratchpad show || exec $term --class nmtui -e 'nmtui'
+bindsym $mod+bracketleft exec swaymsg [app_id="pavucontrol"] scratchpad show || exec pavucontrol
+bindsym $mod+bracketright exec swaymsg [app_id="nmtui"] scratchpad show || exec $term --class nmtui -e 'nmtui'
 
-bindsym $mod+bracketleft exec 'gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark && gsettings set org.gnome.desktop.interface color-scheme prefer-dark'
-bindsym $mod+bracketright exec 'gsettings set org.gnome.desktop.interface gtk-theme Adwaita && gsettings set org.gnome.desktop.interface color-scheme prefer-light'
+# bindsym $mod+bracketleft exec 'gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark && gsettings set org.gnome.desktop.interface color-scheme prefer-dark'
+# bindsym $mod+bracketright exec 'gsettings set org.gnome.desktop.interface gtk-theme Adwaita && gsettings set org.gnome.desktop.interface color-scheme prefer-light'
 
 ### startup
 
