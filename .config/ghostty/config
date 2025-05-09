@@ -1,0 +1,5 @@
+theme = mocha.conf
+font-family = "JetBrains Mono"
+font-size = 16
+confirm-close-surface = false
+command = "/bin/zsh"
