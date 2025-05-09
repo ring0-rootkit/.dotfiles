@@ -44,7 +44,7 @@ left = [ "workspaces" ]
 center = [ "windowTitle" ]
 # The modules that will be displayed on the right side of the status bar
 # The nested modules array will form a group sharing the same element in the status bar
-right = [ "systemInfo", [ "clock", "privacy", "settings" ] ]
+right = [ "keyboardLayout", "systemInfo", [ "clock", "privacy", "settings" ] ]
 
 # Update module configuration.
 # Without a value the related button will not appear.
