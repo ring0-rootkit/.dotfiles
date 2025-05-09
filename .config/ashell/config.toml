@@ -125,7 +125,7 @@ alert_threshold = 90
 # Clock module configuration
 [clock]
 # clock format see: https://docs.rs/chrono/latest/chrono/format/strftime/index.html
-format = "%a %d %b %R"
+format = "%a %d %b %I:%M %P"
 
 # Media player module configuration
 [mediaPlayer]
