@@ -5,6 +5,6 @@ while true; do
     echo restarting...
     ~/.config/hypr/ashell
   fi
-  sleep(3)
+  sleep 3
 done
 
