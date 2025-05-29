@@ -1,4 +1,4 @@
-theme = mocha.conf
+theme = drakula.conf
 font-family = "JetBrains Mono"
 font-size = 16
 confirm-close-surface = false
