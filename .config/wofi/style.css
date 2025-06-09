@@ -2,7 +2,7 @@ window {
     margin: 0px;
     background-color: #ffffff;
     border-radius: 0px;
-    border: 2px solid #ffdd33;
+    border: 2px solid #fa701d;
     color: #575279;
     font-family: 'Monofur Nerd Font';
     font-size: 20px;
@@ -44,14 +44,14 @@ window {
 } 
 
 #entry:selected {
-    background-color: #ffdd33;
+    background-color: #fa701d;
     color: #ffffff;
     border-radius: 0px;;
     outline: none;
 }
 
 #entry:selected * {
-    background-color: #ffdd33;
+    background-color: #fa701d;
     color: #000000;
     border-radius: 0px;;
     outline: none;
