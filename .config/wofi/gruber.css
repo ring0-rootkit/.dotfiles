@@ -44,15 +44,15 @@ window {
 } 
 
 #entry:selected {
-    background-color: #0c0c0c;
-    color: #aaaaaa;
+    background-color: #ffdd33;
+    color: #000000;
     border-radius: 0px;;
     outline: none;
 }
 
 #entry:selected * {
-    background-color: #0c0c0c;
-    color: #aaaaaa;
+    background-color: #ffdd33;
+    color: #000000;
     border-radius: 0px;;
     outline: none;
 }
