@@ -227,8 +227,8 @@ titlebar_padding 1
 # gaps inner 5
 
 client.focused ffdd33 ffdd33 000000
-client.focused_inactive 0e0e0e 0e0e0e e4e4e4
-client.unfocused 0e0e0e 0e0e0e e4e4e4
+client.focused_inactive 0e0f0e 0e0f0e e4e4e4
+client.unfocused 0e0f0e 0e0f0e e4e4e4
 client.urgent ff4f58 ff4f58 e4e4e4 
 
 bar {
@@ -243,7 +243,7 @@ bar {
     colors {
         # dark
         statusline #ffffff
-        background #0e0e0e
+        background #0e0f0e
         inactive_workspace #282828 #282828 #ffffff
         focused_workspace #ffdd33 #ffdd33 #000000
     }

@@ -1,8 +1,33 @@
+echo '{ "version": 1 }'
+echo '['
+echo '[]'
+
 while true; do 
+
+net_color="#ffffff"
+power_color="#ffffff"
+layout_color="#ffffff"
+date_color="#ffffff"
 
 layout=$(swaymsg -t get_inputs | jq -c ' .[] | select(.type | contains("keyboard"))' | jq -s -c '.[0].xkb_active_layout_name' | cut -c 2-3 | tr '[A-Z]' '[a-z]')
 date=$(date +'%Y-%m-%d %I:%M:%S %p')
 power=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep percentage| sed 's/.* //')
+
+bat_state=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep state: | sed 's/.* //')
+
+# TODO: icons for following states
+# TODO: pretty color palette
+# TODO: colors for 90-100 -> green
+#       0-20 -> red
+if [ "$bat_state" = "fully-charged" ];then
+  power_color="#00ff00"
+fi
+if [ "$bat_state" = "charging" ];then
+  power_color="#ffff00"
+fi
+if [ "$bat_state" = "discharging" ];then
+  power_color="#ff0000"
+fi
 
 mem=$(df -h --output=avail / | tail -1 | tr -d ' ')
 
@@ -14,6 +39,10 @@ if [ -z "$network_name" ];then
   net=$(echo no network :\()
 fi
 
-echo $net \| $power \| $layout \| $date \|
+# echo $net \| $power \| $layout \| $date \|
+echo ",[{\"full_text\":\" $net \",   \"color\": \"$net_color\"   }"
+echo ",{\"full_text\":\" $power \",  \"color\": \"$power_color\" }"
+echo ",{\"full_text\":\" $layout \", \"color\": \"$layout_color\"}"
+echo ",{\"full_text\":\" $date \",   \"color\": \"$date_color\"  }]"
 sleep 1; 
 done
