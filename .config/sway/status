@@ -16,6 +16,7 @@ power=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep percentage
 bat_state=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep state: | sed 's/.* //')
 
 # TODO: icons for following states
+# TODO: on click actions
 # TODO: pretty color palette
 # TODO: colors for 90-100 -> green
 #       0-20 -> red
