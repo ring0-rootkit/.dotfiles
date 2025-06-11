@@ -66,14 +66,11 @@ alias t15="sowon 900"
 alias ls='ls --color'
 alias l='ls -hgtpnG --color'
 
-if [ -z $TMUX ]; then; tmux_sessions a q1; fi
+# if [ -z $TMUX ]; then; tmux_sessions a q1; fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-export PATH=$HOME/.local/bin:$PATH
-
-export PATH="/home/ring0/.local/share/solana/install/active_release/bin:$PATH"
 
 # bun completions
 [ -s "/home/ring0/.bun/_bun" ] && source "/home/ring0/.bun/_bun"
@@ -81,7 +78,12 @@ export PATH="/home/ring0/.local/share/solana/install/active_release/bin:$PATH"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# CUSTOM PATH
 export PATH="/home/ring0/.avm/bin:$PATH"
+export PATH="/opt/nvim-linux-x86_64/bin:$PATH"
+export PATH=$HOME/.local/bin:$PATH
+export PATH="/home/ring0/.local/share/solana/install/active_release/bin:$PATH"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
