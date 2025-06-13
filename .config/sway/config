@@ -226,14 +226,14 @@ titlebar_padding 1
 # gaps outer 5
 # gaps inner 5
 
-client.focused ffdd33 ffdd33 000000
-client.focused_inactive 0e0f0e 0e0f0e e4e4e4
-client.unfocused 0e0f0e 0e0f0e e4e4e4
-client.urgent ff4f58 ff4f58 e4e4e4 
+client.focused ffff7f ffff7f 000000
+client.focused_inactive efefef efefef 000000
+client.unfocused efefef efefef 000000
+client.urgent d20f39 d20f39 000000
 
 bar {
-    # position top
-    position bottom
+    position top
+    # position bottom
 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
@@ -242,10 +242,10 @@ bar {
 
     colors {
         # dark
-        statusline #ffffff
-        background #0e0f0e
-        inactive_workspace #282828 #282828 #ffffff
-        focused_workspace #ffdd33 #ffdd33 #000000
+        statusline #000000
+        background #ffffff
+        inactive_workspace #efefef #efefef #000000
+        focused_workspace #ffff7f #ffff7f #000000
     }
 }
 

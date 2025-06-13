@@ -1,4 +1,4 @@
-theme = "gruber.conf" 
+theme = "light.conf" 
 font-family = "Comic Mono"
 font-size = 16
 confirm-close-surface = false

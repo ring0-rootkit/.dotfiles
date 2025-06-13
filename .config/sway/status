@@ -4,10 +4,10 @@ echo '[]'
 
 while true; do 
 
-net_color="#ffffff"
-power_color="#ffffff"
-layout_color="#ffffff"
-date_color="#ffffff"
+net_color="#000000"
+power_color="#000000"
+layout_color="#000000"
+date_color="#000000"
 
 layout=$(swaymsg -t get_inputs | jq -c ' .[] | select(.type | contains("keyboard"))' | jq -s -c '.[0].xkb_active_layout_name' | cut -c 2-3 | tr '[A-Z]' '[a-z]')
 date=$(date +'%Y-%m-%d %I:%M:%S %p')

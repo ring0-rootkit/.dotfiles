@@ -1,35 +1,33 @@
 window {
     margin: 0px;
-    background-color: #0e0e0e;
+    background-color: #ffffff;
     border-radius: 0px;
-    border: 2px solid #ffdd33;
-    color: #ffdd33;
+    border: 2px solid #afafaf;
+    color: #ff0000;
     font-family: 'Monofur Nerd Font';
     font-size: 20px;
 }
 
 #input {
     margin: 5px;
-    border-radius: 0px;
+    border-radius: 6px;
     border: none;
-    border-radius: 0px;;
-    color: #aaaaaa;
-    background-color: #0c0c0c;
-    
+    color: #000000;
+    background-color: #f0f0f0;
 }
 
 #inner-box {
     margin: 5px;
     border: none;
-    background-color: #0e0e0e;
-    color: #aaaaaa;
+    background-color: #ffffff;
+    color: #000000;
     border-radius: 0px;
 }
 
 #outer-box {
     margin: 15px;
     border: none;
-    background-color: #0e0e0e;
+    background-color: #ffffff;
 }
 
 #scroll {
@@ -40,18 +38,18 @@ window {
 #text {
     margin: 5px;
     border: none;
-    color: #aaaaaa;
+    color: #000000;
 } 
 
 #entry:selected {
-    background-color: #ffdd33;
-    color: #000000;
-    border-radius: 0px;;
+    background-color: #ffff8f;
+    color: #ffffff;
+    border-radius: 6px;
     outline: none;
 }
 
 #entry:selected * {
-    background-color: #ffdd33;
+    background-color: #ffff8f;
     color: #000000;
     border-radius: 0px;;
     outline: none;
