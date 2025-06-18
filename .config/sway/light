@@ -1,0 +1,28 @@
+bar {
+    position top
+    # position bottom
+
+    # When the status_command prints a new line to stdout, swaybar updates.
+    # The default just shows the current date and time.
+
+    status_command ~/.config/sway/status
+
+    colors {
+        # dark
+        statusline #000000
+        background #ffffff
+        urgent_workspace #d20f39 #d20f39 #000000
+        inactive_workspace #efefef #efefef #000000
+        focused_workspace #ffff7f #ffff7f #000000
+        
+        #light
+        # statusline #ffffff
+        # background #0e0f0e
+        # urgent_workspace #d20f39 #d20f39 #000000
+        # inactive_workspace #efefef #efefef #000000
+        # focused_workspace #ffff7f #ffff7f #000000
+    }
+}
+
+output * bg #ffff7f solid_color
+

@@ -1,3 +1,5 @@
+include light
+
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -16,13 +18,11 @@ set $browser google-chrome
 
 ### Output configuration
 
-output * bg ~/.config/sway/wall.png fill
-
-# output * bg #282828 solid_color
+# output * bg ~/.config/sway/wall.jpg fill
 
 # Example configuration:
 #
-output eDP-1 res 2880x1800@120Hz scale 1 position 1920,0
+output eDP-1 res 2880x1800@120Hz scale 2 position 1920,0
 output HDMI-A-1 res 1920x1080@60Hz scale 1 position 0,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
@@ -231,24 +231,6 @@ client.focused_inactive efefef efefef 000000
 client.unfocused efefef efefef 000000
 client.urgent d20f39 d20f39 000000
 
-bar {
-    position top
-    # position bottom
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-
-    status_command ~/.config/sway/status
-
-    colors {
-        # dark
-        statusline #000000
-        background #ffffff
-        inactive_workspace #efefef #efefef #000000
-        focused_workspace #ffff7f #ffff7f #000000
-    }
-}
-
 input type:keyboard {
     xkb_layout us,ru
     xkb_options "grp:win_space_toggle,caps:ctrl_modifier"
@@ -269,8 +251,13 @@ for_window [app_id="nmtui"] move scratchpad, scratchpad show
 bindsym $mod+bracketleft exec swaymsg [app_id="pavucontrol"] scratchpad show || exec pavucontrol
 bindsym $mod+bracketright exec swaymsg [app_id="nmtui"] scratchpad show || exec $term --class="org.r0.nmtui" -e nmtui
 
-# bindsym $mod+bracketleft exec 'gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark && gsettings set org.gnome.desktop.interface color-scheme prefer-dark'
-# bindsym $mod+bracketright exec 'gsettings set org.gnome.desktop.interface gtk-theme Adwaita && gsettings set org.gnome.desktop.interface color-scheme prefer-light'
+bindsym $mod+shift+ctrl+bracketleft exec 'gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark && gsettings set org.gnome.desktop.interface color-scheme prefer-dark'
+bindsym $mod+shift+ctrl+bracketright exec 'gsettings set org.gnome.desktop.interface gtk-theme Adwaita && gsettings set org.gnome.desktop.interface color-scheme prefer-light'
+
+### GESTURES
+bindgesture swipe:right workspace prev
+bindgesture swipe:left workspace next
+bindgesture swipe:up exec swaymsg [app_id="pavucontrol"] scratchpad show || exec pavucontrol
 
 ### startup
 

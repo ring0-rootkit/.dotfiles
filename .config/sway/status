@@ -4,10 +4,20 @@ echo '[]'
 
 while true; do 
 
-net_color="#000000"
-power_color="#000000"
-layout_color="#000000"
-date_color="#000000"
+foreground="#000000"
+red="#d20f39"
+green="#40a02b"
+
+#foreground="#bbbbbb"
+#red="#ff0000"
+#green="#00ff00"
+
+net_color="$foreground"
+power_low_color="$red"
+power_mid_color="$foreground"
+power_high_color="$green"
+layout_color="$foreground"
+date_color="$foreground"
 
 layout=$(swaymsg -t get_inputs | jq -c ' .[] | select(.type | contains("keyboard"))' | jq -s -c '.[0].xkb_active_layout_name' | cut -c 2-3 | tr '[A-Z]' '[a-z]')
 date=$(date +'%Y-%m-%d %I:%M:%S %p')
@@ -15,19 +25,24 @@ power=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep percentage
 
 bat_state=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep state: | sed 's/.* //')
 
-# TODO: icons for following states
-# TODO: on click actions
-# TODO: pretty color palette
-# TODO: colors for 90-100 -> green
-#       0-20 -> red
+percentage=${power%%%}
+
 if [ "$bat_state" = "fully-charged" ];then
-  power_color="#00ff00"
+  power="$power 😻"
 fi
 if [ "$bat_state" = "charging" ];then
-  power_color="#ffff00"
+  power="$power ⬆️"
 fi
 if [ "$bat_state" = "discharging" ];then
-  power_color="#ff0000"
+  power="$power ⬇️"
+fi
+
+if [ "$percentage" -ge 0 ] && [ "$percentage" -le 20 ]; then
+  power_color="$power_low_color"
+elif [ "$percentage" -ge 21 ] && [ "$percentage" -le 80 ]; then
+  power_color="$power_mid_color"
+elif [ "$percentage" -ge 81 ] && [ "$percentage" -le 100 ]; then
+  power_color="$power_high_color"
 fi
 
 mem=$(df -h --output=avail / | tail -1 | tr -d ' ')
@@ -42,6 +57,7 @@ fi
 
 # echo $net \| $power \| $layout \| $date \|
 echo ",[{\"full_text\":\" $net \",   \"color\": \"$net_color\"   }"
+echo ",{\"full_text\":\" $mem \",   \"color\": \"$net_color\"    }"
 echo ",{\"full_text\":\" $power \",  \"color\": \"$power_color\" }"
 echo ",{\"full_text\":\" $layout \", \"color\": \"$layout_color\"}"
 echo ",{\"full_text\":\" $date \",   \"color\": \"$date_color\"  }]"
