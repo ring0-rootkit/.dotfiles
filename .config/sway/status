@@ -5,8 +5,8 @@ echo '[]'
 while true; do 
 
 foreground="#000000"
-red="#d20f39"
-green="#40a02b"
+red="#b4637a"
+green="#56949f"
 
 #foreground="#bbbbbb"
 #red="#ff0000"
