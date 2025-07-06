@@ -1,0 +1,5 @@
+#!/bin/bash
+
+sudo dnf install $(cat ./.installed.apps)
+sudo ./bin/dot-linker link.conf
+./scripts/run

@@ -1,0 +1,19 @@
+#!/bin/bash
+
+SCRIPT_DIR="$(dirname "$(realpath "$0")")"
+COMPLETED_FILE="${SCRIPT_DIR}/.completed_scripts"
+
+touch "$COMPLETED_FILE"
+
+mapfile -t scripts < <(find "$SCRIPT_DIR" -maxdepth 1 -type f -name "*.sh" -print | sort)
+
+for script in "${scripts[@]}"; do
+    script_name=$(basename "$script")
+    
+    grep -q "^${script_name}$" "$COMPLETED_FILE" && continue
+    
+    bash "$script"
+    if [ $? -eq 0 ]; then
+        echo "$script_name" >> "$COMPLETED_FILE"
+    fi
+done

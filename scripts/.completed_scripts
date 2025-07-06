@@ -1,0 +1,6 @@
+00_git.sh
+50_rust.sh
+51_solana.sh
+40_docker.sh
+52_anchor.sh
+10_ghostty.sh

@@ -1,0 +1,44 @@
+#!/bin/bash
+
+CONFIG_FILE="link.conf"
+
+create_link() {
+    local source_file="$1"
+    local link_name="$2"
+
+    eval "source_file=\"$source_file\""
+    eval "link_name=\"$link_name\""
+    
+    if [ ! -e "$source_file" ]; then
+        echo "Error: Source file '$source_file' does not exist"
+        return 1
+    fi
+    
+    mkdir -p "$(dirname "$link_name")"
+    
+    if ln -sf "$(realpath "$source_file")" "$link_name"; then
+        echo "Created link: $link_name → $source_file"
+    else
+        echo "Error: Failed to create link $link_name"
+        return 1
+    fi
+}
+
+line_number=0
+while IFS= read -r line || [ -n "$line" ]; do
+    line_number=$((line_number + 1))
+    
+    if [[ -z "$line" || "$line" =~ ^[[:space:]]*# ]]; then
+        continue
+    fi
+    
+    read -r source destination <<< "$line"
+    
+    if [[ -z "$source" || -z "$destination" ]]; then
+        echo "Error: Invalid format in line $line_number - must contain two paths"
+        continue
+    fi
+    
+    create_link "$source" "$destination"
+    
+done < "$CONFIG_FILE"

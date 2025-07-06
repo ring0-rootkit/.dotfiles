@@ -81,7 +81,7 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # CUSTOM PATH
 export PATH="/home/ring0/.avm/bin:$PATH"
-export PATH="/opt/nvim-linux-x86_64/bin:$PATH"
+export PATH="/opt:$PATH"
 export PATH=$HOME/.local/bin:$PATH
 export PATH="/home/ring0/.local/share/solana/install/active_release/bin:$PATH"
 
