@@ -87,7 +87,7 @@ install() {
     fi
 
     if [ ${#flatpak_pkgs[@]} -gt 0 ]; then
-        flatpak install --user -y flathub "${flatpak_pkgs[@]}"
+        flatpak install -y flathub "${flatpak_pkgs[@]}"
         if [ $? -ne 0 ]; then
             echo -e "${RED}Error: Flatpak installation failed for one or more packages.${NC}" >&2
             return 1
@@ -157,7 +157,7 @@ remove() {
     fi
 
     if [ ${#flatpak_pkgs[@]} -gt 0 ]; then
-        flatpak uninstall --user -y "${flatpak_pkgs[@]}"
+        flatpak uninstall -y "${flatpak_pkgs[@]}"
         if [ $? -ne 0 ]; then
             echo -e "${RED}Error: Flatpak removal failed for one or more packages.${NC}" >&2
             return 1
@@ -220,7 +220,7 @@ update() {
         
         sudo dnf update -y
         
-        flatpak update --user -y
+        flatpak update -y
         
         echo -e "${GREEN}Update completed successfully.${NC}"
     else
@@ -254,7 +254,7 @@ update() {
         fi
 
         if [ ${#flatpak_pkgs[@]} -gt 0 ]; then
-            flatpak update --user -y "${flatpak_pkgs[@]}"
+            flatpak update -y "${flatpak_pkgs[@]}"
             if [ $? -ne 0 ]; then
                 echo -e "${RED}Error: Flatpak update failed for one or more packages.${NC}" >&2
                 return 1

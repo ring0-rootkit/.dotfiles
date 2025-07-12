@@ -1,3 +1,5 @@
+# https://github.com/MalpenZibo/ashell
+
 # Ashell log level filter, possible values "debug" | "info" | "warn" | "error". Needs reload
 logLevel = "warn"
 # Possible status bar outputs, values could be: all, active, or a list of outputs
@@ -5,7 +7,7 @@ logLevel = "warn"
 # active: the status bar will be displayed on the active output, example: outputs = "active"
 # list of outputs: the status bar will be displayed on the outputs listed here, example: outputs = { targets = ["DP-1", "eDP-1"] }
 # if the outputs is not available the bar will be displayed in the active output
-outputs = "all"
+# outputs = "all"
 # Bar position, possible values top | bottom.
 position = "top"
 # App launcher command, it will be used to open the launcher,

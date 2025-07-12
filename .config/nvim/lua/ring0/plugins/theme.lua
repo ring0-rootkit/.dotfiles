@@ -7,7 +7,7 @@ return {
 			dark_variant = "main", -- main, moon, or dawn
 
 			styles = {
-				-- transparency = true,
+				transparency = true,
 			},
 			enable = {
 				legacy_highlights = false, -- Improve compatibility for previous versions of Neovim

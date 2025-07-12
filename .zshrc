@@ -80,10 +80,10 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 # CUSTOM PATH
-export PATH="/home/ring0/.avm/bin:$PATH"
+export PATH="/home/r0/.avm/bin:$PATH"
 export PATH="/opt:$PATH"
 export PATH=$HOME/.local/bin:$PATH
-export PATH="/home/ring0/.local/share/solana/install/active_release/bin:$PATH"
+export PATH="/home/r0/.local/share/solana/install/active_release/bin:$PATH"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
