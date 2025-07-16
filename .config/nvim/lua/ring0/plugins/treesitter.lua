@@ -21,9 +21,12 @@ return {
 			sync_install = false,
 			auto_install = true,
 			-- ignore_install = { "javascript" },
+			indent = {
+				disable = true,
+			},
 			highlight = {
-				enable = true,
-				-- disable = true,
+				-- enable = true,
+				disable = true,
 				-- NOTE: these are the names of the parsers and not the filetype. (for example if you want to
 				-- disable highlighting for the `tex` filetype, you need to include `latex` in this list as this is
 				-- the name of the parser)

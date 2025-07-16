@@ -1,15 +1,10 @@
+@import "./current-style.css";
+
 * {
   font-family: jetbrainsmono, monospace;
   font-size: 16px;
   min-height: 0;
   padding: 0.1rem;
-}
-
-window#waybar {
-  /* background: rgba(255, 255, 255, 0.5); */
-  /* color: rgb(0, 0, 0); */
-  background: rgba(0, 0, 0, 0.5);
-  color: rgb(255, 255, 255);
 }
 
 tooltip {

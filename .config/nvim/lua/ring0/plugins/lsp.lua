@@ -27,6 +27,8 @@ return {
 				-- disable syntax highlighting
 				local client = vim.lsp.get_client_by_id(event.data.client_id)
 				client.server_capabilities.semanticTokensProvider = nil
+				client.server_capabilities.documentFormattingProvider = nil
+				client.server_capabilities.documentRangeFormattingProvider = nil
 			end,
 		})
 

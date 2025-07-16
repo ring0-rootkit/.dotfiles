@@ -1,8 +1,8 @@
 theme = dark:"rose-pine",light:"rose-pine-dawn"
-background = "#050505"
-# background = "#ffffff"
-font-family = "JetBrains Mono Thin"
-font-size = 12
+config-file = "~/.config/ghostty/current"
+font-family = "JetBrains Mono"
+font-style = medium
+font-size = 16
 confirm-close-surface = false
 command = "/bin/zsh"
 window-decoration="server"
