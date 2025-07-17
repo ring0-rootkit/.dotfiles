@@ -1,8 +1,5 @@
 return {
 	{
-		"blazkowolf/gruber-darker.nvim",
-	},
-	{
 		"catppuccin/nvim",
 		config = function()
 			require("catppuccin").setup({
