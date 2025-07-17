@@ -1,7 +1,7 @@
-theme = dark:"rose-pine",light:"rose-pine-dawn"
+theme = dark:"catppuccin-mocha",light:"catppuccin-latte"
 config-file = "~/.config/ghostty/current"
 font-family = "JetBrains Mono"
-font-style = medium
+font-style = regular
 font-size = 16
 confirm-close-surface = false
 command = "/bin/zsh"
