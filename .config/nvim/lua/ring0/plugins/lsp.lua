@@ -47,7 +47,7 @@ return {
 		vim.diagnostic.config({
 			-- update_in_insert = true,
 			float = {
-				focusable = false,
+				focusable = true,
 				style = "minimal",
 				border = border,
 				source = "always",
@@ -97,7 +97,17 @@ return {
 					},
 				},
 			},
-			rust_analyzer = {},
+			rust_analyzer = {
+				settings = {
+					["rust-analyzer"] = {
+						completion = {
+							callable = {
+								snippets = "none",
+							},
+						},
+					},
+				},
+			},
 			ts_ls = {},
 			zls = {
 				settings = {
@@ -135,15 +145,10 @@ return {
 		})
 		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
-		require("mason-lspconfig").setup({
-			handlers = {
-				function(server_name)
-					local server = servers[server_name] or {}
-					server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
-					server.handlers = handlers
-					require("lspconfig")[server_name].setup(server)
-				end,
-			},
-		})
+		for server_name, server_config in pairs(servers) do
+			vim.lsp.config(server_name, server_config)
+		end
+
+		require("mason-lspconfig").setup()
 	end,
 }
