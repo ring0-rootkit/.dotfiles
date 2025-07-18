@@ -16,7 +16,7 @@ if [ "$THEME" = "light" ]; then
 elif [ "$THEME" = "dark" ]; then
     gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark 
     gsettings set org.gnome.desktop.interface color-scheme prefer-dark
-    cp ~/.config/wofi/rose-pine.css ~/.config/wofi/style.css
+    cp ~/.config/wofi/dark.css ~/.config/wofi/style.css
     cp ~/.config/mako/dark ~/.config/mako/config
     cp ~/.config/waybar/dark-style.css ~/.config/waybar/current-style.css
     cp ~/.config/ghostty/dark ~/.config/ghostty/current
