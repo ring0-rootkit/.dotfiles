@@ -1,6 +1,6 @@
 show=drun
 width=750
-height=400
+height=70
 always_parse_args=true
 show_all=false
 term=ghostty
@@ -8,4 +8,9 @@ hide_scroll=true
 print_command=true
 insensitive=true
 prompt=>_<
-columns=2
+
+halign=center
+valing=center
+
+content_haling=center
+orientation=horizontal

@@ -1,10 +1,10 @@
 window {
     margin: 0px;
-    background-color: #191724;
+    background-color: #faf4ed;
     border-radius: 0px;
-    border: 2px solid #f6c177;
-    color: #e0def4;
-    font-family: 'Monofur Nerd Font';
+    border: 2px solid #b4637a;
+    color: #575279;
+    font-family: 'JetBrains Mono';
     font-size: 20px;
 }
 
@@ -13,23 +13,23 @@ window {
     border-radius: 0px;
     border: none;
     border-radius: 0px;;
-    color: #f6c177;
-    background-color: #1f1d2e;
+    color: #b4637a;
+    background-color: #f2e9e1;
     
 }
 
 #inner-box {
     margin: 5px;
     border: none;
-    background-color: #1f1d2e;
-    color: #191724;
+    background-color: #f2e9e1;
+    color: #faf4ed;
     border-radius: 0px;
 }
 
 #outer-box {
     margin: 15px;
     border: none;
-    background-color: #191724;
+    background-color: #faf4ed;
 }
 
 #scroll {
@@ -40,19 +40,19 @@ window {
 #text {
     margin: 5px;
     border: none;
-    color: #e0def4;
+    color: #575279;
 } 
 
 #entry:selected {
-    background-color: #f6c177;
-    color: #191724;
+    background-color: #b4637a;
+    color: #faf4ed;
     border-radius: 0px;;
     outline: none;
 }
 
 #entry:selected * {
-    background-color: #f6c177;
-    color: #191724;
+    background-color: #f2e9e1;
+    color: #575279;
     border-radius: 0px;;
     outline: none;
 }

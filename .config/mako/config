@@ -1,5 +1,5 @@
 default-timeout=5000
 ignore-timeout=1
-background-color=#050505
-text-color=#ffffff
+background-color=#ffffff
+text-color=#000000
 layer=overlay
