@@ -5,6 +5,6 @@
 
 # PATH_TO_REPO will be replaced by the script with the actual path
 cd PATH_TO_REPO
-git add -A
-git commit -m "Automatic daily commit"
-git push origin master
+/usr/bin/git add -A
+/usr/bin/git commit -m "Automatic daily commit"
+/usr/bin/git push origin master
