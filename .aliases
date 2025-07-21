@@ -1,2 +1,4 @@
 alias ssharb="ssh -L 127.0.0.1:41003:127.0.0.1:10000 -L 127.0.0.1:49100:127.0.0.1:9100 -L 127.0.0.1:48899:127.0.0.1:8899 -L 127.0.0.1:48999:127.0.0.1:8999 -L 127.0.0.1:48123:127.0.0.1:8123 -L 127.0.0.1:8888:127.0.0.1:8888 -L 127.0.0.1:18080:127.0.0.1:18080 mich@64.130.40.37"
 alias arbcpy='echo "mich@64.130.40.37"|wl-copy'
+
+alias docker-click='docker run -d --name clickhouse-server -p 18123:8123 -p 19000:9000 --ulimit nofile=262144:262144 clickhouse/clickhouse-server'
