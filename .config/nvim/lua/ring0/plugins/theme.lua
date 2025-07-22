@@ -7,8 +7,16 @@ return {
 				styles = {
 					transparency = true,
 				},
+				palette = {
+					moon = {
+						text = "#c0c0c0",
+					},
+				},
 			})
 		end,
+	},
+	{
+		"shaunsingh/nord.nvim",
 	},
 	{
 		"theme",

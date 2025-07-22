@@ -46,4 +46,4 @@ vim.diagnostic.config({
 	},
 })
 
-vim.cmd(":syntax off")
+-- vim.cmd(":syntax off")
