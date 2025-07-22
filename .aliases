@@ -2,3 +2,4 @@ alias ssharb="ssh -L 127.0.0.1:41003:127.0.0.1:10000 -L 127.0.0.1:49100:127.0.0.
 alias arbcpy='echo "mich@64.130.40.37"|wl-copy'
 
 alias docker-click='docker run -d --name clickhouse-server -p 18123:8123 -p 19000:9000 --ulimit nofile=262144:262144 clickhouse/clickhouse-server'
+alias docker-redis='docker run -d --name redis-server -p 127.0.0.1:6379:6379 redis'

@@ -21,9 +21,6 @@ return {
 			sync_install = false,
 			auto_install = true,
 			-- ignore_install = { "javascript" },
-			indent = {
-				disable = true,
-			},
 			highlight = {
 				enable = true,
 				-- disable = true,
