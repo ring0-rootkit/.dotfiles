@@ -15,6 +15,9 @@ return {
 					moon = {
 						text = "#c0c0c0",
 					},
+					dawn = {
+						text = "#303030",
+					},
 				},
 			})
 		end,
