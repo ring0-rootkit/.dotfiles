@@ -6,6 +6,7 @@ return {
 				highlight_groups = {
 					StatusLine = { fg = "love", bg = "love", blend = 10 },
 					StatusLineNC = { fg = "subtle", bg = "surface" },
+					StatusLineTerm = { fg = "love", bg = "love", blend = 10 },
 				},
 				dark_variant = "moon",
 				styles = {

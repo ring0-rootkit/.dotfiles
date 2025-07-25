@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=cursor
+Exec=/mnt/data/apps/Cursor
+Terminal=false
