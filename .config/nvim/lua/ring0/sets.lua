@@ -54,5 +54,4 @@ local result = handle:read("*a")
 handle:close()
 if result == "'prefer-light'\n" then
 	vim.cmd(":syntax off")
-	vim.cmd(":hi colorcolumn guibg='Grey'")
 end
