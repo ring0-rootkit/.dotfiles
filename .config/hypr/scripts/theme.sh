@@ -9,6 +9,7 @@ if [ "$THEME" = "light" ]; then
     cp ~/.config/mako/light ~/.config/mako/config
     cp ~/.config/waybar/light-style.css ~/.config/waybar/current-style.css
     cp ~/.config/ghostty/light ~/.config/ghostty/current
+    cp ~/.config/hypr/dawn.conf ~/.config/hypr/current.conf
     # uncomment when ghostty is updated to needed version
     # kill -USR2 $(pidof ghostty)
     kill -USR2 $(pidof waybar)
@@ -20,6 +21,7 @@ elif [ "$THEME" = "dark" ]; then
     cp ~/.config/mako/dark ~/.config/mako/config
     cp ~/.config/waybar/dark-style.css ~/.config/waybar/current-style.css
     cp ~/.config/ghostty/dark ~/.config/ghostty/current
+    cp ~/.config/hypr/moon.conf ~/.config/hypr/current.conf
     # uncomment when ghostty is updated to needed version
     # kill -USR2 $(pidof ghostty)
     kill -USR2 $(pidof waybar)
