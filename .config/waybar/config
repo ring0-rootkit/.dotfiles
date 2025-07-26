@@ -11,6 +11,7 @@
       "clock"
     ],
     "modules-right": [
+      "custom/blue-light",
       "mpd",
       "idle_inhibitor",
       "pulseaudio",
@@ -20,6 +21,12 @@
       "battery#bat2",
       "tray",
     ],
+    "custom/blue-light": {
+      "exec": "~/.config/waybar/blue-light.sh",
+      "return-type": "json",
+      "interval": 1,
+      "on-click": "killall gammastep || gammastep -O 5700",
+    },
     "hyprland/window": {
       "format": "{class}",
       "max-length": 20,
