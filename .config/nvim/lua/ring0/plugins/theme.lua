@@ -17,8 +17,8 @@ return {
 						text = "#c0c0c0",
 					},
 					dawn = {
-						text = "#303030",
-						surface = "#c0c0c0",
+						-- text = "#303030",
+						-- surface = "#c0c0c0",
 					},
 				},
 			})
