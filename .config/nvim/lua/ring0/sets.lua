@@ -49,5 +49,10 @@ vim.diagnostic.config({
 vim.opt.laststatus = 2
 vim.opt.statusline = " %f %m %= %l:%c ♥ "
 
--- vim.cmd(":syntax off")
--- vim.cmd(":hi colorcolumn guibg='Grey'")
+local handle = io.popen("gsettings get org.gnome.desktop.interface color-scheme")
+local result = handle:read("*a")
+handle:close()
+if result == "'prefer-light'\n" then
+	vim.cmd(":syntax off")
+	vim.cmd(":hi colorcolumn guibg='Grey'")
+end
