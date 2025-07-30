@@ -24,13 +24,14 @@ return {
 			})
 		end,
 	},
+	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 	{
 		"shaunsingh/nord.nvim",
 	},
 	{
 		"theme",
 		init = function()
-			vim.cmd("colorscheme rose-pine")
+			vim.cmd("colorscheme catppuccin")
 		end,
 	},
 }

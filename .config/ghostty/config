@@ -1,4 +1,4 @@
-theme = dark:"rose-pine-moon",light:"rose-pine-dawn"
+theme = dark:"rose-pine-moon",light:"catppuccin-latte"
 config-file = "~/.config/ghostty/current"
 font-family = "JetBrains Mono"
 font-style = regular
