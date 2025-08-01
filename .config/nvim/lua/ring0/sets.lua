@@ -48,10 +48,3 @@ vim.diagnostic.config({
 
 vim.opt.laststatus = 2
 vim.opt.statusline = " %f %m %= %l:%c ♥ "
-
-local handle = io.popen("gsettings get org.gnome.desktop.interface color-scheme")
-local result = handle:read("*a")
-handle:close()
-if result == "'prefer-light'\n" then
-	vim.cmd(":syntax off")
-end

@@ -14,7 +14,7 @@ return {
 				},
 				palette = {
 					moon = {
-						text = "#c0c0c0",
+						text = "#e0e0e0",
 					},
 					dawn = {
 						-- text = "#303030",
@@ -24,14 +24,26 @@ return {
 			})
 		end,
 	},
-	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+	{
+		"catppuccin/nvim",
+		name = "catppuccin",
+		priority = 1000,
+		config = function()
+			require("catppuccin").setup({
+				transparent_background = true,
+				color_overrides = {
+					mocha = {
+						text = "#e0e0e0",
+					},
+					latte = {
+						text = "#000000",
+					},
+				},
+			})
+		end,
+	},
+
 	{
 		"shaunsingh/nord.nvim",
-	},
-	{
-		"theme",
-		init = function()
-			vim.cmd("colorscheme catppuccin")
-		end,
 	},
 }
