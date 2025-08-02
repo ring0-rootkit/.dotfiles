@@ -1,10 +1,10 @@
 window {
     margin: 0px;
-    background-color: #232136;
+    background-color: #fffafa;
     border-radius: 0px;
-    border: 2px solid #eb6f92;
-    color: #e0def4;
-    font-family: 'Monofur Nerd Font';
+    border: 2px solid #b4637a;
+    color: #575279;
+    font-family: 'JetBrains Mono';
     font-size: 20px;
 }
 
@@ -13,23 +13,23 @@ window {
     border-radius: 0px;
     border: none;
     border-radius: 0px;;
-    color: #eb6f92;
-    background-color: #393552;
+    color: #b4637a;
+    background-color: #f2e9e1;
     
 }
 
 #inner-box {
     margin: 5px;
     border: none;
-    background-color: #393552;
-    color: #232136;
+    background-color: #f2e9e1;
+    color: #fffafa;
     border-radius: 0px;
 }
 
 #outer-box {
     margin: 15px;
     border: none;
-    background-color: #232136;
+    background-color: #fffafa;
 }
 
 #scroll {
@@ -40,19 +40,19 @@ window {
 #text {
     margin: 5px;
     border: none;
-    color: #e0def4;
+    color: #303030;
 } 
 
 #entry:selected {
-    background-color: #eb6f92;
-    color: #232136;
+    background-color: #b4637a;
+    color: #fffafa;
     border-radius: 0px;;
     outline: none;
 }
 
 #entry:selected * {
-    background-color: #eb6f92;
-    color: #232136;
+    background-color: #b4637a;
+    color: #fffafa;
     border-radius: 0px;;
     outline: none;
 }

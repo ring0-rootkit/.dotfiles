@@ -36,7 +36,7 @@ return {
 						text = "#e0e0e0",
 					},
 					latte = {
-						text = "#000000",
+						text = "#1e1b1a",
 					},
 				},
 			})
