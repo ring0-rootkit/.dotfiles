@@ -18,7 +18,7 @@ local result = handle:read("*a")
 handle:close()
 if result == "'prefer-light'\n" then
 	vim.cmd("colorscheme catppuccin")
-	-- vim.cmd(":syntax off")
+	vim.cmd(":syntax off")
 else
 	vim.cmd("colorscheme rose-pine")
 end

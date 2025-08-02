@@ -30,6 +30,13 @@ return {
 		priority = 1000,
 		config = function()
 			require("catppuccin").setup({
+				custom_highlights = function()
+					return {
+						StatusLine = { bg = "#ffbbff" },
+						StatusLineNC = { bg = "#ffbbff" },
+						StatusLineTerm = { bg = "#ffbbff" },
+					}
+				end,
 				transparent_background = true,
 				color_overrides = {
 					mocha = {
