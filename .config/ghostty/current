@@ -1,5 +1,5 @@
-background = "#fafafa"
+background = "#ffffff"
 foreground = "#1e1b1a"
 
-cursor-color = #ffbbff
-cursor-text = #000000
+cursor-color = #1e1b1a
+cursor-text = #ffffff

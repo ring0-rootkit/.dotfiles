@@ -24,6 +24,9 @@ vim.o.shiftwidth = 2
 vim.o.tabstop = 2
 vim.o.swapfile = false
 
+vim.o.foldmethod = "marker"
+vim.o.foldlevel = 0
+
 -- vim.o.completeopt = "menuone,noinsert,noselect,popup"
 vim.o.termguicolors = true
 -- vim.o.guicursor = "n-v-c-i-ci-ve-sm:block,r-cr:hor20,o:hor50"

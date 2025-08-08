@@ -43,3 +43,8 @@ map("v", "<leader>s`", "di``<Esc>P")
 map("n", "<leader>ee", "oif err != nil {<CR>}<esc>ko")
 
 map("t", "Esc", "<C-><C-n>")
+
+-- folding
+map("n", "<leader>o", ":foldopen<CR>")
+map("n", "<leader>c", ":foldclose<CR>")
+map("v", "<leader>w", ":fold<CR>")
