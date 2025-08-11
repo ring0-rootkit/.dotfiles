@@ -1,4 +1,10 @@
-theme = dark:"rose-pine-moon",light:"catppuccin-latte"
-config-file = "~/.config/ghostty/current"
+theme = "rose-pine-dawn"
+font-size = 14
 confirm-close-surface = false
 command = "/bin/zsh"
+
+
+background = "#ffffff"
+foreground = "#000000"
+cursor-color = "#000000"
+cursor-text = "#ffffff"
