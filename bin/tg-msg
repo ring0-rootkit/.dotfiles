@@ -1,0 +1,13 @@
+#!/bin/bash
+
+
+
+BOT_TOKEN="1111111111:aaaa-aaaaaaaaaaaaaaaaaaaaaaaaaaa-aa"
+CHAT_ID="-0000000000"
+MESSAGE="$1"
+
+curl -s -X POST "https://api.telegram.org/bot${BOT_TOKEN}/sendMessage" \
+    -d chat_id="${CHAT_ID}" \
+    -d text="${MESSAGE}" \
+    -d parse_mode="Markdown"
+
