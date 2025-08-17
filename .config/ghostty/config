@@ -3,11 +3,12 @@ font-size = 14
 confirm-close-surface = false
 command = "/bin/zsh"
 
-background-opacity=0.90
+background-opacity=0.95
 background-blur=1
 
 
-background = "#ffffff"
-foreground = "#000000"
-cursor-color = "#000000"
-cursor-text = "#ffffff"
+foreground   = "#000000"
+cursor-color = "#ea9d35"
+
+background  = "#ffffff"
+cursor-text = "#000000"
