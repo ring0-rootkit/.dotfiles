@@ -1,14 +1,15 @@
-theme = "rose-pine-dawn"
+theme = "catppuccin-latte"
 font-size = 14
 confirm-close-surface = false
 command = "/bin/zsh"
 
-background-opacity=0.95
+background-opacity=0.9
 background-blur=1
 
+background = "ffeeff"
+foreground = "000000"
+cursor-text = "000000"
+cursor-color = "df8e1d"
 
-foreground   = "#000000"
-cursor-color = "#ea9d35"
-
-background  = "#ffffff"
-cursor-text = "#000000"
+#foreground = "BBBBBB"
+#cursor-text = "000000"
