@@ -6,10 +6,10 @@ command = "/bin/zsh"
 background-opacity=0.9
 background-blur=1
 
-background = "ffeeff"
+background = "fff0ff"
 foreground = "000000"
 cursor-text = "000000"
 cursor-color = "df8e1d"
 
-#foreground = "BBBBBB"
+#foreground = "DDDDDD"
 #cursor-text = "000000"
