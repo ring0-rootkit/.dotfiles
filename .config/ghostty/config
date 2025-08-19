@@ -1,4 +1,4 @@
-theme = "catppuccin-latte"
+theme = "gruber-darker"
 font-size = 14
 confirm-close-surface = false
 command = "/bin/zsh"
@@ -6,10 +6,11 @@ command = "/bin/zsh"
 background-opacity=0.9
 background-blur=1
 
-background = "fff0ff"
-foreground = "000000"
-cursor-text = "000000"
-cursor-color = "df8e1d"
-
-#foreground = "DDDDDD"
+#background = "fff0ff"
+#foreground = "000000"
 #cursor-text = "000000"
+#cursor-color = "df8e1d"
+
+foreground = "DDDDDD"
+background = "181818"
+cursor-text = "000000"
