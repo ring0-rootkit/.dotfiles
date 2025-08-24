@@ -6,4 +6,4 @@ alias docker-click='docker run -d --name clickhouse-server -e CLICKHOUSE_USER=de
 alias docker-redis='docker run -d --name redis-server -p 127.0.0.1:6379:6379 redis'
 
 alias cursor='/mnt/data/apps/Cursor.AppImage'
-alias docekr-grafana='docker run -d --name=grafana -p 3001:3000 grafana/grafana-oss'
+alias docker-grafana='docker run -d --name=grafana -p 3001:3000 grafana/grafana-oss'
