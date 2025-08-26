@@ -1,16 +1,10 @@
-theme = "gruber-darker"
+theme = "catppuccin-mocha"
 font-size = 16
 confirm-close-surface = false
 command = "/bin/zsh"
 
-background-opacity=0.95
-background-blur=1
+background-opacity = 0.9
+background-blur = 1
 
-#background = "fff8ff"
-#foreground = "000000"
-#cursor-text = "000000"
-#cursor-color = "ffdd33"
-
-foreground = "DDDDDD"
-background = "0e0e0e"
 cursor-text = "000000"
+background = "0e0e0e"
