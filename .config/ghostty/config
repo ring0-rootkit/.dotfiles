@@ -1,10 +1,7 @@
-theme = "catppuccin-mocha"
+theme = "Builtin Solarized Light"
 font-size = 16
 confirm-close-surface = false
 command = "/bin/zsh"
 
 background-opacity = 0.9
 background-blur = 1
-
-cursor-text = "000000"
-background = "0e0e0e"
