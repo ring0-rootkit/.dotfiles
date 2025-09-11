@@ -1,4 +1,4 @@
-theme = light:"Adwaita",dark:"catppuccin-mocha"
+theme = light:"Adwaita",dark:"rose-pine"
 font-size = 14
 confirm-close-surface = false
 command = "/bin/zsh"
@@ -7,4 +7,4 @@ background-opacity = 1
 background-blur = 1
 
 cursor-text = "000000"
-background = "0e0e0e"
+background = "0f0f0f"
