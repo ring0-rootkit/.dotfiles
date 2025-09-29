@@ -84,6 +84,7 @@ export PATH="/home/r0/.avm/bin:$PATH"
 export PATH="/opt:$PATH"
 export PATH=$HOME/.local/bin:$PATH
 export PATH="/home/r0/.local/share/solana/install/active_release/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
@@ -92,3 +93,6 @@ export SDKMAN_DIR="$HOME/.sdkman"
 export CC=clang
 
 source ~/.aliases
+source ~/.local/share/omarchy/default/bash/envs
+
+eval "$(mise activate)"
