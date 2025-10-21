@@ -66,7 +66,7 @@ alias t15="sowon 900"
 alias ls='ls --color'
 alias l='ls -hgtpnG --color'
 
-# if [ -z $TMUX ]; then; tmux_sessions a q1; fi
+if [ -z $TMUX ]; then; tmux_sessions a q1; fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -96,3 +96,5 @@ source ~/.aliases
 source ~/.local/share/omarchy/default/bash/envs
 
 eval "$(mise activate)"
+
+[[ -s "/etc/grc.zsh" ]] && source /etc/grc.zsh
