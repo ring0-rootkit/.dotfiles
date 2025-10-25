@@ -97,4 +97,4 @@ source ~/.local/share/omarchy/default/bash/envs
 
 eval "$(mise activate)"
 
-[[ -s "/etc/grc.zsh" ]] && source /etc/grc.zsh
+# [[ -s "/etc/grc.zsh" ]] && source /etc/grc.zsh
