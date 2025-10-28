@@ -56,12 +56,12 @@
 
   "memory": {
     "interval": 5,
-    "format": " {used}/{total} GB ",
+    "format": "| {used}/{total} GB  |",
     "on-click": "$TERMINAL -e btop"
   },
   "cpu": {
     "interval": 5,
-    "format": " {usage:>2}% ",
+    "format": "| {usage:>2}% ",
     "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
   },
   "clock": {

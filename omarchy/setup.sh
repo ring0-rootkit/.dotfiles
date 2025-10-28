@@ -16,5 +16,6 @@ ln -s $(pwd)/waybar/config.jsonc ~/.config/waybar/config.jsonc
 
 ln -s $(pwd)/../.zshrc ~/.zshrc
 ln -s $(pwd)/../.aliases ~/.aliases
+ln -s $(pwd)/../.tmux.conf ~/.tmux.conf
 
 chsh -s /usr/bin/zsh r0

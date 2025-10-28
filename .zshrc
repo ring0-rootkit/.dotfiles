@@ -33,7 +33,7 @@ alias gs="git status"
 # GIT END
 
 setopt PROMPT_SUBST
-PROMPT='%F{blue}%1~%f %F{red}${vcs_info_msg_0_}%f%F{green}→%f '
+PROMPT='%F{blue}%1~%f %F{red}${vcs_info_msg_0_}%f%F{green}❯%f '
 
 export EDITOR="nvim"
 export VISUAL="nvim"
@@ -55,18 +55,12 @@ alias scripts="cd /mnt/storage/scripts"
 alias n='neofetch'
 alias c=gcc -std=c99
 alias vim=nvim
-# alias darktheme='gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark \
-# && gsettings set org.gnome.desktop.interface color-scheme prefer-dark'
-# alias lighttheme='gsettings set org.gnome.desktop.interface gtk-theme Adwaita \
-# && gsettings set org.gnome.desktop.interface color-scheme prefer-light'
 alias ts="ts-node"
 alias t5="sowon 300"
 alias t15="sowon 900"
 
 alias ls='ls --color'
 alias l='ls -hgtpnG --color'
-
-if [ -z $TMUX ]; then; tmux_sessions a q1; fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -85,6 +79,7 @@ export PATH="/opt:$PATH"
 export PATH=$HOME/.local/bin:$PATH
 export PATH="/home/r0/.local/share/solana/install/active_release/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
@@ -97,4 +92,5 @@ source ~/.local/share/omarchy/default/bash/envs
 
 eval "$(mise activate)"
 
-# [[ -s "/etc/grc.zsh" ]] && source /etc/grc.zsh
+if [ -z $TMUX ]; then; tmux_sessions a q1; fi
+
