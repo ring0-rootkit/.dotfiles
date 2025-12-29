@@ -5,7 +5,7 @@ bindkey -e
 zstyle :compinstall filename '/home/ring0/.zshrc'
 
 autoload -Uz vcs_info
-precmd() { vcs_info }
+precmd() { vcs_info; mommy -1 -s $? }
 
 git_wt() { echo; cd $(git_worktree f | tail -n 1); zle accept-line; }
 git_wt_new_branch() { echo; cd $(git_worktree b $1 | tail -n 1); }
@@ -23,7 +23,7 @@ bindkey '^[[1;5C' forward-word                    # ctrl + ->
 bindkey '^[[1;5D' backward-word                   # ctrl + <-
 
 # GIT START
-bindkey '^k' git_wt
+bindkey '^h' git_wt
 alias wt="git worktree"
 alias wtc=create_wt
 alias wtb=git_wt_new_branch
@@ -94,4 +94,6 @@ eval "$(mise activate)"
 
 if [ -z $TMUX ]; then; tmux_sessions a q1; fi
 
+alias v=nvim
 alias fixhyprlock="hyprctl --instance 0 'keyword misc:allow_session_lock_restore 1' && hyprctl --instance 0 'dispatch exec hyprlock'"
+alias disableprimary='hyprctl keyword monitor "eDP-1, disable"'

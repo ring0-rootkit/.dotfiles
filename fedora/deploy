@@ -2,7 +2,7 @@
 
 ./scripts/run prepare
 sudo dnf install $(cat ./.installed.apps)
-sudo ./bin/dot-linker link.conf
+sudo ./bin/dot-linker ../link.conf
 ./scripts/run
 
 sudo cp autocommit /etc/cron.daily/autocommit
