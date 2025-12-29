@@ -5,7 +5,7 @@ bindkey -e
 zstyle :compinstall filename '/home/ring0/.zshrc'
 
 autoload -Uz vcs_info
-precmd() { vcs_info; mommy -1 -s $? }
+precmd() { mommy -1 -s $?; vcs_info }
 
 git_wt() { echo; cd $(git_worktree f | tail -n 1); zle accept-line; }
 git_wt_new_branch() { echo; cd $(git_worktree b $1 | tail -n 1); }
