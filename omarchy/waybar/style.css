@@ -1,7 +1,10 @@
 @import "../omarchy/current/theme/waybar.css";
 
 * {
-  background-color: #FCFCB6;
+  /* background-color: #DCD0FF; */
+  /* color: #000000; */
+
+  background-color: @background;
   color: @foreground;
 
   border: none;
