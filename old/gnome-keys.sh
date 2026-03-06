@@ -1,4 +1,7 @@
 #!/bin/bash
+
+gsettings set org.gnome.shell.extensions.dash-to-dock hot-keys false
+
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-1 "['<Super>1']"
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-1 "['<Super><Shift>1']"
 
