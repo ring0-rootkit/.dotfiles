@@ -107,13 +107,13 @@ vpn () {
             echo "Usage: vpn [c|d|s]"
     else
         if [ "$1" = "c" ]; then
-             sudo -S systemctl start wg-quick@wg-fc > /dev/null 2>&1
+             sudo systemctl start wg-quick@wg-fc > /dev/null 2>&1
             myip
         elif [ "$1" = "d" ]; then
-            | sudo -S systemctl stop wg-quick@wg-fc > /dev/null 2>&1
+            sudo systemctl stop wg-quick@wg-fc > /dev/null 2>&1
             myip
         elif [ "$1" = "s" ]; then
-            sudo -S systemctl status wg-quick@wg-fc.service --output=json --plain --no-pager > /dev/null 2>&1 | grep Active: | awk {'print $2'}
+            sudo systemctl status wg-quick@wg-fc.service --output=json --plain --no-pager > /dev/null 2>&1 | grep Active: | awk {'print $2'}
         else
             echo "Usage: vpn [c|d|s]"
         fi
