@@ -97,3 +97,26 @@ if [ -z $TMUX ]; then; tmux_sessions a q1; fi
 alias v=nvim
 alias fixhyprlock="hyprctl --instance 0 'keyword misc:allow_session_lock_restore 1' && hyprctl --instance 0 'dispatch exec hyprlock'"
 alias disableprimary='hyprctl keyword monitor "eDP-1, disable"'
+
+myip(){
+    echo -e "\e[4;32m$(curl -s -L iplocation.info | grep -E "ip|city" | awk {'print $2'} | tr -d '",:' | tr '\n' ' ')\e[0m"
+}
+
+vpn () {
+    if [ -z "$1" ]; then
+            echo "Usage: vpn [c|d|s]"
+    else
+        if [ "$1" = "c" ]; then
+             sudo -S systemctl start wg-quick@wg-fc > /dev/null 2>&1
+            myip
+        elif [ "$1" = "d" ]; then
+            | sudo -S systemctl stop wg-quick@wg-fc > /dev/null 2>&1
+            myip
+        elif [ "$1" = "s" ]; then
+            sudo -S systemctl status wg-quick@wg-fc.service --output=json --plain --no-pager > /dev/null 2>&1 | grep Active: | awk {'print $2'}
+        else
+            echo "Usage: vpn [c|d|s]"
+        fi
+    fi
+}
+
