@@ -7,6 +7,7 @@ zstyle :compinstall filename '/home/ring0/.zshrc'
 autoload -Uz vcs_info
 precmd() { mommy -1 -s $?; vcs_info }
 
+timelog() { $@ | awk '{print strftime("[%H:%M:%S]"), $0}'}
 git_wt() { echo; cd $(git_worktree f | tail -n 1); zle accept-line; }
 git_wt_new_branch() { echo; cd $(git_worktree b $1 | tail -n 1); }
 create_wt() { echo; cd $(wt_create $1); }
