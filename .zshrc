@@ -133,14 +133,3 @@ dbf () {
         ssh -L 9000:$1:9000 -N $2 
     fi
 }
-
-nvimssh () {
-    if [ -z "$1" ]; then
-        echo "Usage: nvimssh <name of server> <port>\r\nExample: 'nvimssh fc2-r0 6666' gives 'ssh -L 6666:localhost:6666 fc2-r0 \"nvim --listen localhost:6666 --headless\"'"
-    else
-        ssh -L 9000:$1:9000 -N $2 
-    fi
-}
-
-alias nvimlisten='nvim --listen 0.0.0.0:6666 --headless'
-
