@@ -11,3 +11,4 @@ alias vim=nvim
 alias f='cd $(find ~/personal/ ~/work/ -mindepth 1 -maxdepth 1 | fzf --preview "ls -hgltpnG {} --color=always")'
 
 alias k='kubectl'
+alias dbmonitoring="ssh -L 9000:monitoring:9000 -N fc2-r0"

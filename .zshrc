@@ -7,7 +7,7 @@ zstyle :compinstall filename '/home/ring0/.zshrc'
 autoload -Uz vcs_info
 precmd() { mommy -1 -s $?; vcs_info }
 
-timelog() { $@ | awk '{print strftime("[%H:%M:%S]"), $0}'}
+timelog_f() { $@ | awk '{print strftime("[%H:%M:%S]"), $0}'}
 git_wt() { echo; cd $(git_worktree f | tail -n 1); zle accept-line; }
 git_wt_new_branch() { echo; cd $(git_worktree b $1 | tail -n 1); }
 create_wt() { echo; cd $(wt_create $1); }
@@ -98,6 +98,10 @@ if [ -z $TMUX ]; then; tmux_sessions a q1; fi
 alias v=nvim
 alias fixhyprlock="hyprctl --instance 0 'keyword misc:allow_session_lock_restore 1' && hyprctl --instance 0 'dispatch exec hyprlock'"
 alias disableprimary='hyprctl keyword monitor "eDP-1, disable"'
+alias chmox="chmod +x"
+
+alias six="git add -A"
+alias seven="git commit"
 
 myip(){
     echo -e "\e[4;32m$(curl -s -L iplocation.info | grep -E "ip|city" | awk {'print $2'} | tr -d '",:' | tr '\n' ' ')\e[0m"
@@ -120,4 +124,23 @@ vpn () {
         fi
     fi
 }
+
+
+dbf () {
+    if [ -z "$1" ]; then
+        echo "Usage: dbf <name of server to forward to> <ssh target name>\r\nExample: 'dbf monitoring fc2-r0' gives 'ssh -L 9000:monitoring:9000 -N fc2-r0'"
+    else
+        ssh -L 9000:$1:9000 -N $2 
+    fi
+}
+
+nvimssh () {
+    if [ -z "$1" ]; then
+        echo "Usage: nvimssh <name of server> <port>\r\nExample: 'nvimssh fc2-r0 6666' gives 'ssh -L 6666:localhost:6666 fc2-r0 \"nvim --listen localhost:6666 --headless\"'"
+    else
+        ssh -L 9000:$1:9000 -N $2 
+    fi
+}
+
+alias nvimlisten='nvim --listen 0.0.0.0:6666 --headless'
 
