@@ -100,9 +100,6 @@ alias fixhyprlock="hyprctl --instance 0 'keyword misc:allow_session_lock_restore
 alias disableprimary='hyprctl keyword monitor "eDP-1, disable"'
 alias chmox="chmod +x"
 
-alias six="git add -A"
-alias seven="git commit"
-
 myip(){
     echo -e "\e[4;32m$(curl -s -L iplocation.info | grep -E "ip|city" | awk {'print $2'} | tr -d '",:' | tr '\n' ' ')\e[0m"
 }
