@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # put to /usr/local/bin/tmux_sessions
 

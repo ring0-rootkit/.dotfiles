@@ -5,7 +5,6 @@ bindkey -e
 zstyle :compinstall filename '/home/ring0/.zshrc'
 
 autoload -Uz vcs_info
-precmd() { mommy -1 -s $?; vcs_info }
 
 timelog_f() { $@ | awk '{print strftime("[%H:%M:%S]"), $0}'}
 git_wt() { echo; cd $(git_worktree f | tail -n 1); zle accept-line; }
@@ -43,7 +42,6 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export PATH=$PATH:/usr/local/go/bin
 export PATH="$PATH:/opt/nvim-linux64/bin"
-. "$HOME/.cargo/env"  
 
 alias templg="cd templ && templ generate && cd .."
 alias ta="tmux_sessions a"
@@ -89,9 +87,6 @@ export SDKMAN_DIR="$HOME/.sdkman"
 export CC=clang
 
 source ~/.aliases
-source ~/.local/share/omarchy/default/bash/envs
-
-eval "$(mise activate)"
 
 if [ -z $TMUX ]; then; tmux_sessions a q1; fi
 
@@ -132,3 +127,5 @@ dbf () {
         ssh -L 9000:$1:9000 -N $2 
     fi
 }
+
+export PATH=$PATH:/home/r0/personal/.dotfiles/bin
