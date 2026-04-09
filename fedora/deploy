@@ -1,9 +1,6 @@
 #!/bin/bash
 
-./scripts/run prepare
+../scripts/run prepare
 sudo dnf install $(cat ./.installed.apps)
 sudo ./bin/dot-linker ../link.conf
-./scripts/run
-
-sudo cp autocommit /etc/cron.daily/autocommit
-sudo sed -i "s|PATH_TO_REPO|$(pwd)|g" /etc/cron.daily/autocommit
+../scripts/run
