@@ -1,1 +1,6 @@
-/home/r0/.config/ghostty/config.ghostty
+shell-integration = zsh
+clipboard-paste-protection = false
+keybind = ctrl+shift+j=unbind
+
+config-file=./dark
+
