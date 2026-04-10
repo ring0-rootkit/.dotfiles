@@ -128,4 +128,27 @@ dbf () {
     fi
 }
 
+
+nix() {
+  if [[ $1 == "develop" || $1 == "shell" ]]; then
+    shift
+    command nix develop -c zsh "$@"
+  else
+    command nix "$@"
+  fi
+}
+
+export NIX_BUILD_SHELL=$(which zsh)
+
+nix_shell_prompt() {
+  if [[ -n "$IN_NIX_SHELL" ]] || [[ -n "$name" ]] || [[ "$PATH" == *"/nix/store/"*"-env"* ]]; then
+    if [[ "$PROMPT" != *"[nix]"* ]]; then
+      PROMPT="%F{cyan}[nix]%f $PROMPT"
+    fi
+  fi
+}
+
+add-zsh-hook precmd nix_shell_prompt
+
+
 export PATH=$PATH:/home/r0/personal/.dotfiles/bin
