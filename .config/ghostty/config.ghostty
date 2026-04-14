@@ -2,5 +2,5 @@ shell-integration = zsh
 clipboard-paste-protection = false
 keybind = ctrl+shift+j=unbind
 
-config-file=./light
+config-file=./dark
 
