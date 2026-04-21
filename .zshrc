@@ -5,7 +5,6 @@ bindkey -e
 zstyle :compinstall filename '/home/ring0/.zshrc'
 
 autoload -Uz vcs_info
-precmd() { mommy -1 -s $?; vcs_info }
 
 timelog_f() { $@ | awk '{print strftime("[%H:%M:%S]"), $0}'}
 git_wt() { echo; cd $(git_worktree f | tail -n 1); zle accept-line; }
