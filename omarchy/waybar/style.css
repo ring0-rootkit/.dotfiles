@@ -4,8 +4,8 @@
   /* background-color: #DCD0FF; */
   /* color: #000000; */
 
-  background-color: @background;
-  color: @foreground;
+  background-color: @bg;
+  color: @fg;
 
   border: none;
   border-radius: 0;
