@@ -4,13 +4,13 @@
   /* background-color: #DCD0FF; */
   /* color: #000000; */
 
-  background-color: @bg;
-  color: @fg;
+  background-color: @background;
+  color: @foreground;
 
   border: none;
   border-radius: 0;
   min-height: 0;
-  font-family: 'CaskaydiaMono Nerd Font';
+  font-family: 'JetBrainsMono Nerd Font';
   font-size: 12px;
 }
 
@@ -105,3 +105,14 @@ tooltip {
 /*   color: #94e2d5; */
 /* } */
 
+
+#custom-weather {
+  margin-left: 7.5px;
+  margin-right: 7.5px;
+}
+
+#custom-weather.unavailable {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+}
