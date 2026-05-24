@@ -134,3 +134,9 @@ dbf () {
         ssh -L 9000:$1:9000 -N $2 
     fi
 }
+
+# pyenv (added by lora-trx Makefile)
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+export PLATFORMIO_PYTHONEXE="/home/r0/.pyenv/versions/3.13.0/bin/python"

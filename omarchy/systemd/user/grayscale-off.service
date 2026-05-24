@@ -1,0 +1,6 @@
+[Unit]
+Description=Disable Hyprland grayscale shader
+
+[Service]
+Type=oneshot
+ExecStart=%h/.config/hypr/grayscale.sh off
