@@ -1,0 +1,87 @@
+# Font
+font-family = "JetBrainsMono Nerd Font"
+font-style = Regular
+font-size = 13
+
+# Theme — tokyonight-moon (matches Neovim exactly)
+background = 222436
+foreground = c8d3f5
+cursor-color = c8d3f5
+selection-background = 2d3f76
+selection-foreground = c8d3f5
+
+palette = 0=#1b1d2b
+palette = 1=#ff757f
+palette = 2=#c3e88d
+palette = 3=#ffc777
+palette = 4=#82aaff
+palette = 5=#c099ff
+palette = 6=#86e1fc
+palette = 7=#828bb8
+palette = 8=#444a73
+palette = 9=#ff757f
+palette = 10=#c3e88d
+palette = 11=#ffc777
+palette = 12=#82aaff
+palette = 13=#c099ff
+palette = 14=#86e1fc
+palette = 15=#c8d3f5
+
+# Window
+window-theme = ghostty
+window-padding-x = 14
+window-padding-y = 14
+confirm-close-surface = false
+resize-overlay = never
+gtk-toolbar-style = flat
+
+# Cursor styling
+cursor-style = "block"
+cursor-style-blink = false
+
+# Cursor styling + SSH session terminfo
+# (all shell integration options must be passed together)
+shell-integration-features = no-cursor,ssh-env
+
+# ===== Keyboard bindings =====
+
+# Clipboard: Shift+Insert pastes, Ctrl+Insert copies (Linux/X11 convention; harmless on macOS).
+keybind = shift+insert=paste_from_clipboard
+keybind = control+insert=copy_to_clipboard
+
+# Resize the current Ghostty split with Cmd+Ctrl+arrow (100px per press).
+keybind = super+ctrl+arrow_down=resize_split:down,100
+keybind = super+ctrl+arrow_up=resize_split:up,100
+keybind = super+ctrl+arrow_left=resize_split:left,100
+keybind = super+ctrl+arrow_right=resize_split:right,100
+
+# Free Ctrl+Shift+J from Ghostty so tmux can use it (tmux had `bind-key -n C-j` in the past).
+keybind = ctrl+shift+j=unbind
+
+# cmd+d  -> sends Ctrl-D byte (\x04): delete char forward in zsh, EOF on empty prompt.
+#           Overrides Ghostty's default of "split right".
+keybind = cmd+d=text:\x04
+# cmd+shift+d -> unbound (was Ghostty's default "split down"; removed to avoid accidental splits).
+keybind = cmd+shift+d=unbind
+# cmd+b  -> sends Ctrl-W byte (\x17): zsh `backward-kill-word` (delete previous word).
+keybind = cmd+b=text:\x17
+
+# cmd+<N> -> sends ESC+<N> (Meta-<N>). tmux's `bind-key -n M-1..9` jumps to session N.
+keybind = cmd+digit_1=esc:1
+keybind = cmd+digit_2=esc:2
+keybind = cmd+digit_3=esc:3
+keybind = cmd+digit_4=esc:4
+keybind = cmd+digit_5=esc:5
+keybind = cmd+digit_6=esc:6
+keybind = cmd+digit_7=esc:7
+keybind = cmd+digit_8=esc:8
+keybind = cmd+digit_9=esc:9
+
+# Left Option acts as Alt/Meta (for M- bindings in zsh/tmux); right Option still types accents.
+macos-option-as-alt = left
+
+# Slowdown mouse scrolling
+mouse-scroll-multiplier = 0.95
+
+# Fix general slowness on hyprland
+async-backend = epoll
