@@ -95,7 +95,7 @@ source ~/.local/share/omarchy/default/bash/envs
 
 eval "$(mise activate)"
 
-if [ -z $TMUX ]; then; tmux_sessions a q1; fi
+# if [ -z $TMUX ]; then; tmux_sessions a q1; fi
 
 alias v=nvim
 alias fixhyprlock="hyprctl --instance 0 'keyword misc:allow_session_lock_restore 1' && hyprctl --instance 0 'dispatch exec hyprlock'"
